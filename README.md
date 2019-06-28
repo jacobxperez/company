@@ -1,4 +1,4 @@
-# [company](https://jacobxperez.github.io/company/)
+# [Company](https://jacobxperez.github.io/company/)
 
 A professional website template
 
