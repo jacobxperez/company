@@ -1,0 +1,57 @@
+// Plan Card
+// ----------------------------------------------------------------------------/
+
+.plan-card {
+	.margin-bottom(@base-leading, @unit: rem);
+	margin-left: auto;
+	margin-right: auto;
+	.max-width(300px);
+	background-color: #fff;
+	text-align: center;
+	.border-radius();
+	.box-shadow(0 0 5px rgba(0, 0, 0, 0.2););
+}
+
+.plan-header {
+	.padding(40px, 20px);
+	background-color: @primary;
+	color: #fff;
+	.border-radius(@base-border-radius, @base-border-radius, 0, 0);
+
+	p {
+		margin: 0;
+	}
+}
+
+.plan-title {
+	.font-size(18px);
+}
+
+.plan-price {
+	.font-size(44px);
+}
+
+.plan-body {
+	list-style-type: none;
+	margin: 0;
+	.padding(40px, 20px, 20);
+
+	li {
+		.padding(10px, 0);
+		.border-bottom(@color: rgba(0, 0, 0, 0.2););
+	}
+
+	li:last-child {
+		padding-bottom: 0;
+		border: 0;
+	}
+}
+
+.plan-footer {
+	.padding(20px, 20px, 40px);
+
+	.button {
+		width: 100%;
+		border: 0;
+	}
+}

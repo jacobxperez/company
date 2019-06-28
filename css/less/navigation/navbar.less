@@ -1,0 +1,72 @@
+// Navbar
+// ----------------------------------------------------------------------------/
+
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	.border-bottom(1px; solid; #2C333D);
+	background-color: @base-font-color;
+	.text-shadow(0 2px 2px rgba(0, 0, 0, 0.3););
+
+	a {
+		display: block;
+		color: @base-background;
+
+		&:focus {
+			outline: 0;
+		}
+
+		&:hover,
+		&:active {
+			.color(@primary);
+			text-decoration: none;
+		}
+
+		&.active {
+			.color(@base-background, 20%, dark);
+		}
+	}
+}
+
+.brand {
+	float: left;
+	display: block;
+	.margin-left(-10px);
+	.padding-left(10px);
+	.padding-right(10px);
+	.font-size(20px);
+	.line-height(44px, @base: 20px);
+	font-weight: 700;
+
+	.icon-logo {
+		.margin-right(5px);
+	}
+
+	.icon-logo:before {
+		content: '\e8b1'
+	}
+}
+
+.nav {
+	margin-bottom: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav {
+	> li {
+		float: left;
+	}
+
+	a {
+		.padding(10px);
+	}
+}
+
+.nav > li:last-child {
+	.margin-right(-10px);
+}

@@ -1,0 +1,34 @@
+// Social Links
+// ----------------------------------------------------------------------------/
+
+.social-links {
+	position: relative;
+	.top(-9px);
+	float: right;
+	margin: 0;
+
+	li,
+	a {
+		float: left;
+		display: block;
+	}
+
+	a {
+		.padding();
+		color: @base-background;
+
+		&:hover,
+		&:active {
+			color: @primary;
+			text-decoration: none;
+		}
+	}
+}
+
+// Small Grid
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @breakpoint-small-max) {
+	.social-links {
+		float: left;
+	}
+}
