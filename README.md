@@ -1,6 +1,6 @@
 # [Company](https://jacobxperez.github.io/company/)
 
-A professional website template
+A professional single page website template
 
 ## Table of Contents
 
