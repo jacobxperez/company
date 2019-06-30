@@ -29,7 +29,7 @@ The easiest way to include the [company](https://jacobxperez.github.io/company/)
 
 ### Custom build
 
-The [company](https://jacobxperez.github.io/company/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use **style.less** for compiling all necessary modules for your website and **settings.less** for adjusting the values of fonts, colors, padding and more.
+The [company](https://jacobxperez.github.io/company/) theme is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use **style.less** for compiling all necessary modules for your website and **settings.less** for adjusting the values of fonts, colors, padding and more.
 
 * css/style.less (for compiling all LESS modules)
 * css/less/settings.less (for changing the settings)
