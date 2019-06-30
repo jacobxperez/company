@@ -377,7 +377,7 @@ button,
 input[type=button] {
 	display: inline-block;
 	padding: .5em .875em;
-	border: .0625em solid rgba(0, 0, 0, 0.3);
+	border: 0 solid rgba(0, 0, 0, 0.3);
 	background-color: #eee;
 	color: #333;
 	text-align: center;
