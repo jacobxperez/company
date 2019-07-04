@@ -18,6 +18,11 @@
 	outline: 0;
 }
 
+body,
+html {
+	height: 100%;
+}
+
 html {
 	font-size: 100%;
 }
@@ -29,11 +34,6 @@ body {
 	line-height: 1.5;
 	background-color: #edeff2;
 	overflow: auto;
-}
-
-body,
-html {
-	height: 100%;
 }
 
 article,
@@ -2590,6 +2590,11 @@ a.linkedin:hover {
 	}
 }
 @media print {
+	body,
+	html {
+		height: auto;
+	}
+
 	html {
 		font-size: 100%;
 	}
@@ -2597,11 +2602,6 @@ a.linkedin:hover {
 	body {
 		background: white;
 		color: black;
-	}
-
-	body,
-	html {
-		height: auto;
 	}
 
 	nav {
