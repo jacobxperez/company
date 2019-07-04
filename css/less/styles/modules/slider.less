@@ -110,15 +110,15 @@
 
 // Responsive settings
 // ----------------------------------------------------------------------------/
-@media screen and (max-width: @breakpoint-large-min) {
-	.slider {
-		.height(568px, @large-min-width, vw);
-	}
-}
-
 @media screen and (max-width: @breakpoint-small-max) {
 	.prev-slide,
 	.next-slide {
 		display: none;
+	}
+}
+
+@media screen and (max-width: @breakpoint-large-min) {
+	.slider {
+		.height(568px, @wrapper-large-max-width, vw);
 	}
 }
