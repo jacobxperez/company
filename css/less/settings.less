@@ -1,4 +1,5 @@
 // Global Styles
+// common shared styles among selectors
 // ----------------------------------------------------------------------------/
 
 // colors
@@ -55,6 +56,18 @@
 @link-decoration: none;
 @link-decoration-hover: underline;
 
+// small
+@small-font-size: 14px;
+
+// mark
+@mark-background: #ffff00;
+@mark-color: #000;
+
+// hr
+@hr-border-width: 2px;
+@hr-border-style: @base-border-style;
+@hr-border-color: @base-border-color;
+
 // indentation
 @indent: 32px;
 
@@ -106,22 +119,6 @@
 @h6-line-height: @base-line-height;
 
 
-// Elements
-// ----------------------------------------------------------------------------/
-
-// small
-@small-font-size: 14px;
-
-// mark
-@mark-background: #ffff00;
-@mark-color: #000;
-
-// hr
-@hr-border-width: 2px;
-@hr-border-style: @base-border-style;
-@hr-border-color: @base-border-color;
-
-
 // Code
 // ----------------------------------------------------------------------------/
 @code-font-family: @font-mono;
@@ -166,7 +163,7 @@
 @button-padding-y: @base-padding-y;
 @button-padding-x: @base-padding-x;
 
-@button-border-width: 0;
+@button-border-width: none;
 @button-border-color: @base-border-color;
 @button-background: #eee;
 @button-color: @base-font-color;
