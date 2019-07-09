@@ -1,8 +1,8 @@
-$(function () {
+$(function() {
 
 	// 1 Dropdown Menu
-	$('.dropdown').each(function () {
-		$(this).on('click', function () {
+	$('.dropdown').each(function() {
+		$(this).on('click', function() {
 			$(this)
 				.children('.menu')
 				.slideToggle(500);
@@ -11,14 +11,14 @@ $(function () {
 
 
 	// 2 Hide menu on scroll
-	$(window).on('scroll', function () {
+	$(window).on('scroll', function() {
 		var menu = $('.menu');
 		menu.slideUp(500);
 	}); // end hide menu on scroll
 
 
 	// 3 Slider
-	$(".slider").each(function () {
+	$(".slider").each(function() {
 		var slider = $(this),
 			slides = slider.find(".slide"),
 			totalSlides = slides.length,
@@ -31,8 +31,8 @@ $(function () {
 		function cycleItems() {
 			var currSlide = slides.eq(currIndex);
 
-			slides.fadeOut(500);
-			currSlide.fadeIn(500);
+			slides.fadeOut(500).css("z-index", 1);
+			currSlide.fadeIn(500).css("z-index", 5);
 		} // end cycleItem
 
 		// Changes slides
@@ -50,7 +50,7 @@ $(function () {
 		function startSlider() {
 			clearInterval(sliderInterval);
 
-			sliderInterval = setInterval(function () {
+			sliderInterval = setInterval(function() {
 				changeSlide();
 			}, intervalTime);
 		} // end startSlider
@@ -61,7 +61,7 @@ $(function () {
 				// load img
 				imgCache[currIndex] = new Image();
 				imgCache[currIndex].src = slides.eq(currIndex).find("img").attr("src");
-				imgCache[currIndex].onload = function () {
+				imgCache[currIndex].onload = function() {
 					currIndex += 1;
 					preloader();
 				};
@@ -73,7 +73,7 @@ $(function () {
 		}()); // end preloader
 
 		// click on next
-		$(".next-slide").on("click", function () {
+		$(".next-slide").on("click", function() {
 			currIndex += 1;
 
 			if (currIndex > totalSlides - 1) {
@@ -85,7 +85,7 @@ $(function () {
 		}); // end click of next
 
 		// click on prev
-		$(".prev-slide").on("click", function () {
+		$(".prev-slide").on("click", function() {
 			currIndex -= 1;
 
 			if (currIndex < 0) {
@@ -99,7 +99,7 @@ $(function () {
 
 
 	// 4 Smooth Scrolling on internal links
-	$('a[href*="#"]:not([href="#"])').click(function () {
+	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
