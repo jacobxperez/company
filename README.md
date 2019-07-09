@@ -4,8 +4,7 @@ A professional single page website template
 
 ## Table of Contents
 
-* [About](#about)
-	* [Project Status](#project-status)
+* [Project Status](#project-status)
 * [Getting Started](#getting-started)
 	* [Default Build](#default-build)
 	* [Custom Build](#custom-build)
@@ -16,11 +15,7 @@ A professional single page website template
 	* [Pull Requests](#pull-requests)
 * [LICENSE](#license)
 
-## About
-
-Company is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on adding your own components check out [custom build](#custom-build).
-
-### Project Status
+## Project Status
 
 Project under active development. No stable version has been release.
 
