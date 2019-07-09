@@ -7,12 +7,12 @@
 	z-index: 100;
 	width: 100%;
 	.border-bottom(1px; solid; #2C333D);
-	background-color: @base-font-color;
+	background-color: @font-color;
 	.text-shadow(0 2px 2px rgba(0, 0, 0, 0.3););
 
 	a {
 		display: block;
-		color: @base-background;
+		color: @background-color;
 
 		&:focus {
 			outline: 0;
@@ -20,12 +20,12 @@
 
 		&:hover,
 		&:active {
-			.color(@primary);
+			color: @primary;
 			text-decoration: none;
 		}
 
 		&.active {
-			.color(@base-background, 20%, dark);
+			color: darken(@background-color, 20%);
 		}
 	}
 }
