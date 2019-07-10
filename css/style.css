@@ -953,7 +953,12 @@ a.linkedin:hover {
 }
 @media screen and (max-width: 61.25em) {
 	.slider {
-		height: 57.95918367vw;
+		max-height: 57.95918367vw;
+	}
+}
+@media screen and (min-height: 61.25em) {
+	.slider {
+		max-height: 57.95918367vw;
 	}
 }
 
