@@ -8,7 +8,6 @@ A professional single page website template
 * [Getting Started](#getting-started)
 	* [Default Build](#default-build)
 	* [Custom Build](#custom-build)
-	* [Features](#features)
 * [Contributing](#contributing)
 	* [Bug Reports](#bug-reports)
 	* [Feature Requests](#feature-requests)
@@ -44,23 +43,14 @@ All main components and dependencies can be found under folder [core](https://gi
 
 * [/css/less/core](https://github.com/jacobxperez/company/tree/master/css/less/core)
 	* [reset](https://github.com/jacobxperez/company/tree/master/css/less/core/reset)
+	* [layout](https://github.com/jacobxperez/company/tree/master/css/less/core/layout)
 	* [mixins](https://github.com/jacobxperez/company/tree/master/css/less/core/mixins)
 
 We recommend to add all extra modules under folder [components](https://github.com/jacobxperez/company/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) for compiling.
 
 * [/css/less/components](https://github.com/jacobxperez/company/tree/master/css/less/components)
-	* [layout](https://github.com/jacobxperez/company/tree/master/css/less/components/layout)
 	* [modules](https://github.com/jacobxperez/company/tree/master/css/less/components/modules)
 	* [navigation](https://github.com/jacobxperez/company/tree/master/css/less/components/navigation)
-
-*By default Company has no predefine navigation, use your own custom code.*
-
-### Features
-
-* Fluid and responsive grid system
-* Minimal design with no decorative styles
-* No more pixels everything is set to relative units
-* Build on LESS with mixin library
 
 ## Contributing
 
@@ -84,12 +74,16 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 
 ## LICENSE
 
-Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
+Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez)
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version. This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-[GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

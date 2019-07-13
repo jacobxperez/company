@@ -1,5 +1,7 @@
 // Global Styles
 // common shared styles among selectors
+// always work on px and the mixins will output in relative units
+// variables that can be set to off will not output a style declaration
 // ----------------------------------------------------------------------------/
 
 // colors
@@ -7,6 +9,9 @@
 @background-color: #edeff2;
 @primary: #148f6a;
 @secondary: #22272e;
+@danger: #f30;
+@warning: #fc0;
+@success: #0c3;
 
 // margins
 @base-margin-y: 20px;
@@ -66,44 +71,45 @@
 @hr-border-color: @base-border-color;
 
 // indentation
+// for list items
 @indent: 32px;
 
 
 // Headings
 // ----------------------------------------------------------------------------/
 @headings-font-family: off;
-@headings-font-weight: 700;
+@headings-font-weight: 400;
 @headings-leading: @base-leading;
 
 // heading 1
-@h1-font-size: 47px;
-@h1-leading: off;
-@h1-line-height: 48px;
+@h1-font-size: 48px;
+@h1-line-height: 54px;
+@h1-leading: 18px;
 
 // heading 2
-@h2-font-size: 33px;
-@h2-leading: off;
+@h2-font-size: 32px;
 @h2-line-height: 36px;
+@h2-leading: off;
 
 // heading 3
-@h3-font-size: 23px;
-@h3-leading: off;
+@h3-font-size: 24px;
 @h3-line-height: 36px;
+@h3-leading: off;
 
 // heading 4
-@h4-font-size: 16px;
-@h4-leading: off;
+@h4-font-size: 20px;
 @h4-line-height: @base-line-height;
+@h4-leading: off;
 
 // heading 5
-@h5-font-size: 16px;
-@h5-leading: off;
+@h5-font-size: 18px;
 @h5-line-height: @base-line-height;
+@h5-leading: off;
 
 // heading 6
 @h6-font-size: 16px;
-@h6-leading: off;
 @h6-line-height: @base-line-height;
+@h6-leading: off;
 
 
 // Iconography
@@ -118,8 +124,8 @@
 // Code
 // ----------------------------------------------------------------------------/
 @code-font-family: @font-mono;
-@code-background: #e6e6e6;
-@code-color: #555;
+@code-background: #222;
+@code-color: #e6e6e6;
 
 
 // Pre
@@ -160,36 +166,20 @@
 @button-padding-y: @base-padding-y;
 @button-padding-x: @base-padding-x;
 
-@button-background: @secondary;
-@button-color: @font-color;
-@button-border-width: off; // can be set to off
+@button-color: #fff;
+@button-background: @primary;
+@button-background-hover: lighten(@button-background, 3%);
+@button-background-active: darken(@button-background, 3%);
+
+@button-border-width: off;
 @button-border-color: @base-border-color;
 @button-border-radius: @base-border-radius;
 
 
 // Selection
 // ----------------------------------------------------------------------------/
-@selection-background: #c2daff;
-@selection-color: #000;
-
-
-// Page Wrapper
-// ----------------------------------------------------------------------------/
-@wrapper-class: container;
-@wrapper-padding: 20px;
-@wrapper-padding-top: @wrapper-padding * 2;
-@wrapper-padding-bottom: @wrapper-padding * 3;
-
-// small wrapper widths
-@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
-@wrapper-small-max-width: (640px + (@wrapper-padding * 2));
-
-// medium wrapper widths
-@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
-@wrapper-medium-max-width: (800px + (@wrapper-padding * 2));
-
-// large wrapper widths
-@wrapper-large-max-width: (940px + (@wrapper-padding * 2));
+@selection-background: @primary;
+@selection-color: #fff;
 
 
 // Grid System
@@ -211,8 +201,27 @@
 @large-columns: 12;
 
 
+// Page Wrapper
+// ----------------------------------------------------------------------------/
+@wrapper-class: container;
+@wrapper-padding: 20px;
+@wrapper-padding-top: @wrapper-padding * 2;
+@wrapper-padding-bottom: @wrapper-padding * 3;
+
+// small wrapper widths
+@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
+@wrapper-small-max-width: (640px + (@wrapper-padding * 2));
+
+// medium wrapper widths
+@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
+@wrapper-medium-max-width: (800px + (@wrapper-padding * 2));
+
+// large wrapper widths
+@wrapper-large-max-width: (940px + (@wrapper-padding * 2));
+
+
 // Breakpoints
-// notice it's using wrapper widths to calculate breakpoints
+// !notice it's using wrapper widths to calculate breakpoints
 // ----------------------------------------------------------------------------/
 
 // small screen
@@ -227,6 +236,7 @@
 
 
 // Scale Breakpoint
+// at this point all elements will begin to scale up
 // ----------------------------------------------------------------------------/
-@scale-min-width: 1600px;
+@scale-min-width: 1920px;
 @breakpoint-scale-min: unit((@scale-min-width / @root-font-size), em);
