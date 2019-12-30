@@ -4,8 +4,7 @@ A professional single page website template
 
 ## Table of Contents
 
-* [About](#about)
-	* [Project Status](#project-status)
+* [Project Status](#project-status)
 * [Getting Started](#getting-started)
 	* [Default Build](#default-build)
 	* [Custom Build](#custom-build)
@@ -14,10 +13,6 @@ A professional single page website template
 	* [Feature Requests](#feature-requests)
 	* [Pull Requests](#pull-requests)
 * [LICENSE](#license)
-
-## About
-
-Company is a base CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixins, operations, and functions.
 
 ### Project Status
 
