@@ -3,7 +3,6 @@
 
 input[type=date],
 input[type=datetime-local],
-input[type=datetime],
 input[type=email],
 input[type=month],
 input[type=number],
@@ -20,6 +19,7 @@ textarea {
 	.padding(@form-padding-y; @form-padding-x; @unit: rem);
 	.border(@form-border-width; solid; @form-border-color);
 	width: 100%;
+	background-color: @form-background-color;
 	line-height: @base-line-height;
 	.border-radius(@form-border-radius);
 	box-shadow: none;

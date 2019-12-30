@@ -4,7 +4,8 @@ A professional single page website template
 
 ## Table of Contents
 
-* [Project Status](#project-status)
+* [About](#about)
+	* [Project Status](#project-status)
 * [Getting Started](#getting-started)
 	* [Default Build](#default-build)
 	* [Custom Build](#custom-build)
@@ -14,9 +15,13 @@ A professional single page website template
 	* [Pull Requests](#pull-requests)
 * [LICENSE](#license)
 
-## Project Status
+## About
 
-Project under active development. No stable version has been release.
+Company is a base CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixins, operations, and functions.
+
+### Project Status
+
+Project under active development. **NO** stable version has been released.
 
 ## Getting Started
 
@@ -24,20 +29,20 @@ Start by **[downloading](https://github.com/jacobxperez/company/archive/master.z
 
 	$ git clone https://github.com/jacobxperez/company.git
 
-*Keep in mind that this project is under active development and no stable version has been release.*
+*Keep in mind that this project is under active development and no stable version has been released.*
 
 ### Default Build
 
-The easiest way to include [Company](https://jacobxperez.github.io/company/) in your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
+The easiest way to include [Company](https://jacobxperez.github.io/company/) in your projects is by copying the pre-compiled CSS file into your project folder and then link to it in HTML.
 
 * [/css/style.css](https://github.com/jacobxperez/company/blob/master/css/style.css)
 
 ### Custom Build
 
-[Company](https://jacobxperez.github.io/company/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) for compiling all necessary modules for your website and [settings.less](https://github.com/jacobxperez/company/blob/master/css/less/settings.less) for adjusting the values of fonts, colors, padding and more.
+[Company](https://jacobxperez.github.io/company/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) for compiling all necessary modules for your website and the [variable files](https://github.com/jacobxperez/company/blob/master/css/less/variables) for adjusting the values of fonts, colors, padding and more.
 
 * [/css/style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) (for compiling all LESS modules)
-* [/css/less/settings.less](https://github.com/jacobxperez/company/blob/master/css/less/settings.less) (for changing the settings)
+* [/css/less/variables](https://github.com/jacobxperez/company/blob/master/css/less/variables) (for changing the settings)
 
 All main components and dependencies can be found under folder [core](https://github.com/jacobxperez/company/tree/master/css/less/core).
 
@@ -46,7 +51,7 @@ All main components and dependencies can be found under folder [core](https://gi
 	* [layout](https://github.com/jacobxperez/company/tree/master/css/less/core/layout)
 	* [mixins](https://github.com/jacobxperez/company/tree/master/css/less/core/mixins)
 
-We recommend to add all extra modules under folder [components](https://github.com/jacobxperez/company/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) for compiling.
+We recommend to adding extra modules under folder [components](https://github.com/jacobxperez/company/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/company/blob/master/css/style.less) for compiling.
 
 * [/css/less/components](https://github.com/jacobxperez/company/tree/master/css/less/components)
 	* [modules](https://github.com/jacobxperez/company/tree/master/css/less/components/modules)
@@ -54,7 +59,7 @@ We recommend to add all extra modules under folder [components](https://github.c
 
 ## Contributing
 
-Help us make [Company](https://jacobxperez.github.io/company/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/company/issues) for bug reports, features requests and submitting pull requests.
+Help us make [Company](https://jacobxperez.github.io/company/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/company/issues) for bug reports, feature requests and submitting pull requests. Please read our [Design Principles](#design-principles) to better understand the nature and the direction of the project.
 
 ### Bug Reports
 
@@ -66,7 +71,7 @@ Before opening a feature request, please take a moment to find out whether your 
 
 ### Pull Requests
 
-Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.
+Please ask first before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.
 
 * Is it essential?
 * Will it add value?

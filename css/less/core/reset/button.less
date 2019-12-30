@@ -24,10 +24,7 @@ input[type="submit"] {
 	.border-radius(@button-border-radius);
 	z-index: 1;
 
-	&:focus {
-		background-color: @button-background-hover;
-	}
-
+	&:focus,
 	&:hover {
 		background-color: @button-background-hover;
 		text-decoration: none;
@@ -40,12 +37,24 @@ input[type="submit"] {
 
 button,
 input[type=button],
+input[type="submit"],
 select {
 	overflow: visible;
 	text-transform: none;
 }
 
+.@{button-class}-disabled,
 button[disabled],
 html input[disabled] {
-	cursor: default;
+	background-color: @button-disabled-background;
+	color: @button-disabled-color;
+	cursor: not-allowed;
+
+	&:focus,
+	&:hover,
+	&:active {
+		background-color: @button-disabled-background;
+		color: @button-disabled-color;
+		text-decoration: none;
+	}
 }

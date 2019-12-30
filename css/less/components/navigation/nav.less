@@ -1,0 +1,33 @@
+// Navigation V1.0
+// -----------------------------------------------------------------------------
+
+.nav-list,
+.nav-inline {
+
+	.active,
+	.nav-title {
+		font-weight: 700;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		color: darken(@link-color, 20%);
+	}
+
+}
+
+.nav-inline {
+
+	> li {
+		display: inline-block;
+	}
+
+}
+
+.nav-list {
+
+	.nav-title {
+		.margin-bottom(@base-leading);
+	}
+
+}

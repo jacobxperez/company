@@ -1,31 +1,21 @@
-// Navbar
+// Navbar V1.0
 // ----------------------------------------------------------------------------/
 
 .navbar {
-	position: fixed;
-	top: 0;
-	z-index: 100;
 	width: 100%;
-	.border-bottom(1px; solid; #2C333D);
-	background-color: @font-color;
-	.text-shadow(0 2px 2px rgba(0, 0, 0, 0.3););
+	background-color: @navbar-background;
 
 	a {
-		display: block;
-		color: @background-color;
+		color: @navbar-color;
 
 		&:focus {
 			outline: 0;
 		}
 
-		&:hover,
-		&:active {
-			color: @primary;
-			text-decoration: none;
-		}
-
-		&.active {
-			color: darken(@background-color, 20%);
+		&.active,
+		&:hover {
+			color: @navbar-color-hover;
+			.transition();
 		}
 	}
 }
@@ -33,19 +23,14 @@
 .brand {
 	float: left;
 	display: block;
-	.margin-left(-10px);
-	.padding-left(10px);
-	.padding-right(10px);
+	.margin-left(-@grid-gutters);
+	.padding-left(@grid-gutters);
+	.padding-right(@grid-gutters);
 	.font-size(20px);
-	.line-height(44px, @base: 20px);
-	font-weight: 700;
+	.line-height(44px; 20px);
 
-	.icon-logo {
+	.logo {
 		.margin-right(5px);
-	}
-
-	.icon-logo:before {
-		content: '\e8b1'
 	}
 }
 
@@ -69,4 +54,9 @@
 
 .nav > li:last-child {
 	.margin-right(-10px);
+}
+
+.navbar + .@{wrapper-class},
+.navbar + .@{wrapper-class}-full {
+	.padding-top(@wrapper-padding-top * 2);
 }

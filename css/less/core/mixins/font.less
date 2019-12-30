@@ -1,4 +1,4 @@
-// Font Family
+// Font Family V1.0
 // -----------------------------------------------------------------------------
 
 .font-family(@font-family) {
@@ -11,11 +11,15 @@
 // Font Face
 // -----------------------------------------------------------------------------
 
-.font-face(@name, @path) {
+.font-face(@name; @path) {
 	@font-face {
-		font-family: "@{name}";
-		src: url("@{path}@{name}.eot");
-		src: url("@{path}@{name}.eot?#iefix") format("embedded-opentype"), url("@{path}@{name}.woff2") format("woff2"), url("@{path}@{name}.woff") format("woff"), url("@{path}@{name}.ttf") format("truetype"), url("@{path}@{name}.svg#@{name}") format("svg");
+		font-family: '@{name}';
+		src: url('@{path}@{name}.eot');
+		src: url('@{path}@{name}.eot?#iefix') format('embedded-opentype'),
+		url('@{path}@{name}.woff2') format('woff2'),
+		url('@{path}@{name}.woff') format('woff'),
+		url('@{path}@{name}.ttf')  format('truetype'),
+		url('@{path}@{name}.svg#@{name}') format('svg');
 	}
 }
 
@@ -23,7 +27,7 @@
 // Font Size
 // -----------------------------------------------------------------------------
 
-.font-size(@size: @base-font-size, @base: @base-font-size, @unit: %) {
+.font-size(@size: @base-font-size; @base: @base-font-size; @unit: %) {
 
 	& when not (@size = off) {
 
@@ -48,7 +52,7 @@
 			@a: unit((@size / @base));
 			font-size: @a;
 		}
-		
+
 	}
 
 }
@@ -57,7 +61,7 @@
 // Line Height
 // -----------------------------------------------------------------------------
 
-.line-height(@height: @base-line-height, @base: @base-font-size, @unit: none) {
+.line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
 	& when not (@height = off) {
 
