@@ -74,7 +74,7 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 
 ## LICENSE
 
-Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez)
+Copyright (C) 2020 [Jacob Perez](https://github.com/jacobxperez)
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License");
 you may not use this file except in compliance with the License.
