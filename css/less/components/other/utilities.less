@@ -1,0 +1,148 @@
+// Utilities v1.0
+// ----------------------------------------------------------------------------/
+
+// Floats
+// ----------------------------------------------------------------------------/
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+// Position
+// ----------------------------------------------------------------------------/
+.fixed-top,
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.fixed-top {
+    top: 0;
+}
+
+.fixed-bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 100%;
+}
+
+.bottom {
+    bottom: 100%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+
+// Alignment
+// ----------------------------------------------------------------------------/
+.block-indent {
+    .padding-left(@indent);
+}
+
+.text-indent {
+    .text-indent();
+}
+
+.text-outdent {
+    .padding-left(@indent);
+    .text-indent(-@indent);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+// Visibility
+// ----------------------------------------------------------------------------/
+.show-print {
+    display: none;
+}
+
+
+// Small Screen
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @breakpoint-small-max) {
+    .float-left-@{small-prefix} {
+        float: left;
+    }
+
+    .float-right-@{small-prefix} {
+        float: right;
+    }
+
+    .hide-@{medium-prefix}-down,
+    .hide-@{small-prefix},
+    .show-@{medium-prefix},
+    .show-@{large-prefix} {
+        display: none;
+    }
+}
+
+
+// Medium Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
+    .float-left-@{medium-prefix} {
+        float: left;
+    }
+
+    .float-right-@{medium-prefix} {
+        float: right;
+    }
+
+    .hide-@{medium-prefix}-up,
+    .hide-@{medium-prefix}-down,
+    .hide-@{medium-prefix},
+    .show-@{small-prefix},
+    .show-@{large-prefix} {
+        display: none;
+    }
+}
+
+
+// Large Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-large-min) {
+    .float-left-@{large-prefix} {
+        float: left;
+    }
+
+    .float-right-@{large-prefix} {
+        float: right;
+    }
+
+    .hide-@{medium-prefix}-up,
+    .hide-@{large-prefix},
+    .show-@{small-prefix},
+    .show-@{medium-prefix} {
+        display: none;
+    }
+}

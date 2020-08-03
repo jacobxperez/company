@@ -1,62 +1,31 @@
 // Navbar V1.0
 // ----------------------------------------------------------------------------/
-
 .navbar {
-	width: 100%;
-	background-color: @navbar-background;
+    z-index: 1025;
+    width: 100%;
+    background-color: @navbar-background-color;
 
-	a {
-		color: @navbar-color;
+    a {
+        color: @navbar-link-color;
 
-		&:focus {
-			outline: 0;
-		}
-
-		&.active,
-		&:hover {
-			color: @navbar-color-hover;
-			.transition();
-		}
-	}
+        &.active,
+        &:hover {
+            color: @navbar-link-color-hover;
+        }
+    }
 }
 
-.brand {
-	float: left;
-	display: block;
-	.margin-left(-@grid-gutters);
-	.padding-left(@grid-gutters);
-	.padding-right(@grid-gutters);
-	.font-size(20px);
-	.line-height(44px; 20px);
-
-	.logo {
-		.margin-right(5px);
-	}
-}
-
-.nav {
-	margin-bottom: 0;
-}
-
-.nav {
-	float: right;
-}
-
-.nav {
-	> li {
-		float: left;
-	}
-
-	a {
-		.padding(10px);
-	}
-}
-
-.nav > li:last-child {
-	.margin-right(-10px);
+.navbar-brand {
+    float: left;
+    display: block;
+    .margin-left(-@grid-gutters);
+    .padding-left(@grid-gutters);
+    .padding-right(@grid-gutters);
+    .font-size(20px);
+    .line-height(44px; 20px);
 }
 
 .navbar + .@{wrapper-class},
 .navbar + .@{wrapper-class}-full {
-	.padding-top(@wrapper-padding-top * 2);
+    .padding-top(@wrapper-padding-top * 2);
 }

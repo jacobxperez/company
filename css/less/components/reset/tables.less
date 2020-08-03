@@ -1,0 +1,16 @@
+// Table V1.0
+// ----------------------------------------------------------------------------/
+table {
+    display: table;
+    width: 100%;
+    .margin-bottom(@base-leading);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    display: table-cell;
+    .padding(@table-cell-padding-y; @table-cell-padding-x);
+    text-align: left;
+}
