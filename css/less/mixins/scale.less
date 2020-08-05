@@ -1,9 +1,9 @@
-// Scale V1.0
+// Scale
 // ----------------------------------------------------------------------------/
 .scale(@vw: @scale-width; @vh: @scale-height){
 
-    @breakpoint-vw: unit((@vw / 16px), em);
-    @breakpoint-vh: unit((@vh / 16px), em);
+    @breakpoint-vw: unit((@vw / @root-font-size), em);
+    @breakpoint-vh: unit((@vh / @root-font-size), em);
 
     // Scale by Height
     @media screen and (min-height: @breakpoint-vh) {
