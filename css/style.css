@@ -16,11 +16,6 @@
     outline: 0;
 }
 
-body,
-html {
-    height: 100%;
-}
-
 html {
     font-size: 100%;
 }
@@ -1571,6 +1566,11 @@ a.linkedin:hover {
     .social-links {
         float: left;
     }
+}
+
+body,
+html {
+    height: 100%;
 }
 
 .slider {
