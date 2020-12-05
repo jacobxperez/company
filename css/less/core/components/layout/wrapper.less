@@ -1,37 +1,20 @@
-// Wrapper V1.0
+// Wrapper
 // ----------------------------------------------------------------------------/
-.@{wrapper-class},
-.@{wrapper-class}-full {
-    .clearfix();
-
-    position: relative;
-    width: 100%;
-    .padding-left(@wrapper-padding);
-    .padding-right(@wrapper-padding);
-}
-
 .@{wrapper-class} {
-    .min-width(@wrapper-small-min-width);
-    .max-width(@wrapper-large-max-width);
+    display: grid;
+    .column-gap(@wrapper-gap);
+    width: 100%;
+    .min-width(@wrapper-min-width);
+    .max-width(@wrapper-max-width);
     margin: 0 auto;
+    .padding-left(@wrapper-gap);
+    .padding-right(@wrapper-gap);
 }
 
-body > .@{wrapper-class}:first-child,
-body > .@{wrapper-class}-full:first-child {
-    .padding-top(@wrapper-padding-top);
+body > .@{wrapper-class}:first-child {
+    .margin-top(@base-line-height * 2);
 }
 
-body {
-    > .@{wrapper-class}:only-child,
-    > .@{wrapper-class}-full:only-child  {
-        .padding-top(@wrapper-padding-top);
-        .padding-bottom(@wrapper-padding-bottom);
-    }
-}
-
-body {
-    > .@{wrapper-class}:last-child,
-    > .@{wrapper-class}-full:last-child {
-        .padding-bottom(@wrapper-padding-bottom);
-    }
+body > .@{wrapper-class}:last-child {
+    .margin-bottom(@base-line-height * 4);
 }

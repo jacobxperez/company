@@ -1,0 +1,41 @@
+// Navigation
+// -----------------------------------------------------------------------------
+.nav-link {
+    display: block;
+    .padding(@nav-link-padding-y; @nav-link-padding-x);
+    color: @nav-link-color;
+    .transition();
+
+    &.active,
+    &:hover,
+    &:active {
+        color: @nav-link-color-hover;
+        text-decoration: none;
+    }
+}
+
+.alt-link {
+    color: @alt-link-color;
+
+    &.active,
+    &:hover,
+    &:active {
+        color: @alt-link-color-hover;
+    }
+}
+
+
+// Breadcrumb
+// ----------------------------------------------------------------------------/
+.breadcrumb {
+    li::after {
+        content: @breadcrumb-separator;
+        .margin-right(4px);
+    }
+
+    li:only-child::after,
+    li:last-child::after {
+        content: "";
+        margin-right: 0;
+    }
+}

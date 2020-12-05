@@ -1,0 +1,73 @@
+// Borders
+// -----------------------------------------------------------------------------
+.border(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@width = false) {
+        @a: unit((@width / @base), @unit);
+        border: @a @style @color;
+    }
+
+}
+
+.border-top(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@width = false) {
+        @a: unit((@width / @base), @unit);
+        border-top: @a @style @color;
+    }
+
+}
+
+.border-right(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@width = false) {
+        @a: unit((@width / @base), @unit);
+        border-right: @a @style @color;
+    }
+
+}
+
+.border-bottom(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@width = false) {
+        @a: unit((@width / @base), @unit);
+        border-bottom: @a @style @color;
+    }
+
+}
+
+.border-left(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@width = false) {
+        @a: unit((@width / @base), @unit);
+        border-left: @a @style @color;
+    }
+
+}
+
+
+// Borders Radius
+// -----------------------------------------------------------------------------
+.border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@top-left =  false) {
+        @a: unit((@top-left / @base), @unit);
+        @b: unit((@top-right / @base), @unit);
+        @c: unit((@bottom-right / @base), @unit);
+        @d: unit((@bottom-left / @base), @unit);
+
+        border-radius: @a @b @c @d;
+    }
+
+}
+
+
+// Border Color
+// -----------------------------------------------------------------------------
+.border-color (@color: @base-border-color; @amount: 6.5%; @switch: none;) {
+
+    & when not (@color = false) {
+        border-color: @color;
+    }
+
+}

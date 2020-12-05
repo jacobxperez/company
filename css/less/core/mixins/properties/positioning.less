@@ -1,0 +1,82 @@
+// Positioning
+// -----------------------------------------------------------------------------
+.top(@position: 1px; @base: @root-font-size; @unit: rem;) {
+
+    & when not (@position = false) {
+        & when (@unit = %) {
+            top: percentage(@position / @base);
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            top: unit(((@position / @base) * 100), @unit);
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            top: unit((@position / @base), @unit);
+        }
+
+        & when (@unit = none) {
+            top: unit((@position / @base));
+        }
+    }
+}
+
+.bottom(@position: 1px; @base: @root-font-size; @unit: rem;) {
+    & when not (@position = false) {
+        & when (@unit = %) {
+            bottom: percentage(@position / @base);
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            bottom: unit(((@position / @base) * 100), @unit);
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            bottom: unit((@position / @base), @unit);
+        }
+
+        & when (@unit = none) {
+            bottom: unit((@position / @base));
+        }
+    }
+}
+
+.left(@position: 1px; @base: @root-font-size; @unit: rem;) {
+    & when not (@position = false) {
+        & when (@unit = %) {
+            left: percentage(@position / @base);
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            left: unit(((@position / @base) * 100), @unit);
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            left: unit((@position / @base), @unit);
+        }
+
+        & when (@unit = none) {
+            left: unit((@position / @base));
+        }
+    }
+}
+
+.right(@position: 1px; @base: @root-font-size; @unit: rem;) {
+    & when not (@position = false) {
+        & when (@unit = %) {
+            right: percentage(@position / @base);
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            right: unit(((@position / @base) * 100), @unit);
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            right: unit((@position / @base), @unit);
+        }
+
+        & when (@unit = none) {
+            right: unit((@position / @base));
+        }
+    }
+}

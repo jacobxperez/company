@@ -2,18 +2,22 @@
 // ----------------------------------------------------------------------------/
 
 // small screen
-@breakpoint-small-max: unit((@wrapper-small-max-width / @base-font-size), em);
+@breakpoint-small-max-width: (640px + (@wrapper-gap * 2));
+
+// medium screen: starts after small-max and end before large-min
+@breakpoint-medium-min-width: (@breakpoint-small-max-width + 1 / @base-font-size);
+@breakpoint-medium-max-width: (@breakpoint-large-min-width - 1 / @base-font-size);
+
+// large screens
+@breakpoint-large-min-width: (@wrapper-max-width);
+
+
+// small screen
+@breakpoint-small-max: unit((@breakpoint-small-max-width / @root-font-size), em);
 
 // medium screen
-@breakpoint-medium-min: unit((@wrapper-medium-min-width / @base-font-size), em);
-@breakpoint-medium-max: unit(((@wrapper-large-max-width - 1) / @base-font-size), em);
+@breakpoint-medium-min: unit((@breakpoint-medium-min-width / @root-font-size), em);
+@breakpoint-medium-max: unit(((@breakpoint-medium-max-width ) / @root-font-size), em);
 
 // large screen
-@breakpoint-large-min: unit((@wrapper-large-max-width / @base-font-size), em);
-
-
-// Scale
-// site begins to scale at a given screen width and height
-// ----------------------------------------------------------------------------/
-@scale-width: 1600px;
-@scale-height: @scale-width;
+@breakpoint-large-min: unit((@breakpoint-large-min-width / @root-font-size), em);

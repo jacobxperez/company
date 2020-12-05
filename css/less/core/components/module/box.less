@@ -1,0 +1,24 @@
+// Box
+// ----------------------------------------------------------------------------/
+.box {
+    display: block;
+    .padding(@base-padding-y, @base-padding-x);
+}
+
+
+// Ghost Box
+// ----------------------------------------------------------------------------/
+.ghost-box {
+    display: none;
+    width: 100%;
+    margin-bottom: 0;
+    .min-width(@ghost-box-min-width);
+    visibility: hidden;
+    .transition();
+}
+
+// added by javascript
+.active + .ghost-box {
+    display: block;
+    visibility: visible;
+}

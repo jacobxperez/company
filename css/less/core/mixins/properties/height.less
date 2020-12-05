@@ -1,0 +1,50 @@
+// Heights
+// -----------------------------------------------------------------------------
+.height(@height; @base: @root-font-size; @unit: rem;) {
+
+    & when (@unit = em), (@unit = rem) {
+        height: unit((@height / @base), @unit);
+    }
+
+    & when (@unit = %) {
+        height: percentage(@height / @base);
+    }
+
+    & when (@unit = vw),
+    (@unit = vh) {
+        height: unit(((@height / @base) * 100), @unit);
+    }
+
+}
+
+.max-height(@height; @base: @root-font-size; @unit: rem;) {
+
+    & when (@unit = em), (@unit = rem) {
+        max-height: unit((@height / @base), @unit);
+    }
+
+    & when (@unit = %) {
+        max-height: percentage(@height / @base);
+    }
+
+    & when (@unit = vw), (@unit = vh) {
+        max-height: unit(((@height / @base) * 100), @unit);
+    }
+
+}
+
+.min-height(@height; @base: @root-font-size; @unit: rem;) {
+
+    & when (@unit = em), (@unit = rem) {
+        min-height: unit((@height / @base), @unit);
+    }
+
+    & when (@unit = %) {
+        min-height: percentage(@height / @base);
+    }
+
+    & when (@unit = vw), (@unit = vh) {
+        min-height: unit(((@height / @base) * 100), @unit);
+    }
+
+}

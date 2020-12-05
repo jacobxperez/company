@@ -1,17 +1,11 @@
 // Wrapper
 // ----------------------------------------------------------------------------/
 @wrapper-class: container;
-@wrapper-padding: 20px;
-@wrapper-padding-top: @wrapper-padding * 2;
-@wrapper-padding-bottom: @wrapper-padding * 3;
+@wrapper-gap: 20px;
 
-// small wrapper widths
-@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
-@wrapper-small-max-width: (@wrapper-small-width + (@wrapper-padding * 2));
 
-// medium wrapper widths
-@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
-@wrapper-medium-max-width: (@wrapper-medium-width + (@wrapper-padding * 2));
+// min width
+@wrapper-min-width: (280px + (@wrapper-gap * 2));
 
-// large wrapper widths
-@wrapper-large-max-width: (@wrapper-large-width + (@wrapper-padding * 2));
+// max width
+@wrapper-max-width: (940px + (@wrapper-gap * 2));

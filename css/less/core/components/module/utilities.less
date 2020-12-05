@@ -1,5 +1,9 @@
-// Utilities v1.0
+// Utilities
 // ----------------------------------------------------------------------------/
+.block {
+    display: block;
+    width: 100%;
+}
 
 // Floats
 // ----------------------------------------------------------------------------/
@@ -14,11 +18,24 @@
 
 // Position
 // ----------------------------------------------------------------------------/
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed-top,
+.fixed-bottom {
+    left: 0;
+    right: 0;
+}
+
 .fixed-top,
 .fixed-bottom {
     position: fixed;
-    right: 0;
-    left: 0;
+    z-index: 1025;
 }
 
 .fixed-top {
@@ -29,12 +46,21 @@
     bottom: 0;
 }
 
+.fixed-top .@{wrapper-class} > ul {
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+}
+
+.fixed-top + .@{wrapper-class} {
+    .margin-top(@base-line-height * 4);
+}
+
 .top {
-    top: 100%;
+    bottom: 100%;
 }
 
 .bottom {
-    bottom: 100%;
+    top: 100%;
 }
 
 .left {
@@ -48,7 +74,7 @@
 
 // Alignment
 // ----------------------------------------------------------------------------/
-.block-indent {
+.indent {
     .padding-left(@indent);
 }
 
@@ -79,69 +105,55 @@
 }
 
 
+// Flex Box
+// ----------------------------------------------------------------------------/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+
+// Justify Content
+// ----------------------------------------------------------------------------/
+.content-start {
+    justify-content: start;
+}
+
+.content-end {
+    justify-content: end;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-stretch {
+    justify-content: stretch;
+}
+
+.content-around {
+    justify-content: space-around;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+.content-evenly {
+    justify-content: space-evenly;
+}
+
+
 // Visibility
 // ----------------------------------------------------------------------------/
-.show-print {
-    display: none;
-}
-
-
-// Small Screen
-// ----------------------------------------------------------------------------/
-@media screen and (max-width: @breakpoint-small-max) {
-    .float-left-@{small-prefix} {
-        float: left;
-    }
-
-    .float-right-@{small-prefix} {
-        float: right;
-    }
-
-    .hide-@{medium-prefix}-down,
-    .hide-@{small-prefix},
-    .show-@{medium-prefix},
-    .show-@{large-prefix} {
-        display: none;
-    }
-}
-
-
-// Medium Screen
-// ----------------------------------------------------------------------------/
-@media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
-    .float-left-@{medium-prefix} {
-        float: left;
-    }
-
-    .float-right-@{medium-prefix} {
-        float: right;
-    }
-
-    .hide-@{medium-prefix}-up,
-    .hide-@{medium-prefix}-down,
-    .hide-@{medium-prefix},
-    .show-@{small-prefix},
-    .show-@{large-prefix} {
-        display: none;
-    }
-}
-
-
-// Large Screen
-// ----------------------------------------------------------------------------/
-@media screen and (min-width: @breakpoint-large-min) {
-    .float-left-@{large-prefix} {
-        float: left;
-    }
-
-    .float-right-@{large-prefix} {
-        float: right;
-    }
-
-    .hide-@{medium-prefix}-up,
-    .hide-@{large-prefix},
-    .show-@{small-prefix},
-    .show-@{medium-prefix} {
-        display: none;
-    }
+.opacity {
+    opacity: 0.95;
 }
