@@ -1,6 +1,6 @@
 # [Company](https://jacobxperez.github.io/company/)
 
-A professional single page website template built with [Essentials](https://github.com/jacobxperez/essentials)
+A single page website template for your company marketing, built with [Essentials](https://github.com/jacobxperez/essentials)
 
 ## LICENSE
 
