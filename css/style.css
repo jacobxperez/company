@@ -2231,37 +2231,23 @@ html {
     }
 }
 @font-face {
-    font-family: "social";
+    font-family: 'social';
     src: url("../fonts/social/social.eot");
-    src: url("../fonts/social/social.eot?#iefix") format("embedded-opentype"), url("../fonts/social/social.woff") format("woff"), url("../fonts/social/social.woff2") format("woff2"), url("../fonts/social/social.ttf") format("truetype"), url("../fonts/social/social.svg#social") format("svg");
-    font-weight: normal;
+    src: url("../fonts/social/social.eot?#iefix") format('embedded-opentype'), url("../fonts/social/social.woff2") format('woff2'), url("../fonts/social/social.woff") format('woff'), url("../fonts/social/social.ttf") format('truetype'), url("../fonts/social/social.svg#social") format('svg');
+}
+
+[class^="social-"]:before {
+    position: relative;
+    top: .125rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: "social";
     font-style: normal;
-}
-
-[data-icon]:before {
-    font-family: "social" !important;
-    content: attr(data-icon);
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: .625;
+    text-transform: none;
     speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="social-"]:before,
-[class*=" social-"]:before {
-    font-family: "social" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .social-behance:before {
