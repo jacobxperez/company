@@ -18,20 +18,6 @@
     outline: 0;
 }
 
-html {
-    font-size: 100%;
-}
-
-body {
-    overflow: auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    color: #333;
-    background-color: #edeff2;
-}
-
 audio,
 canvas,
 embed,
@@ -51,27 +37,22 @@ summary {
     display: list-item;
 }
 
-hr {
-    box-sizing: content-box;
-    display: block;
-    height: 1px;
-    border-top: .0625rem solid rgba(0, 0, 0, 0.3);
+html {
+    font-size: 100%;
+}
+
+body {
+    overflow: auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #333;
+    background-color: #edeff2;
 }
 
 [hidden] {
     display: none;
-}
-
-::-moz-selection {
-    background-color: #cde1ff;
-    color: #000;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #cde1ff;
-    color: #000;
-    text-shadow: none;
 }
 
 h1,
@@ -178,6 +159,13 @@ sup {
 
 sub {
     bottom: -0.25em;
+}
+
+hr {
+    box-sizing: content-box;
+    display: block;
+    height: 1px;
+    border-top: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
 dl,
@@ -355,6 +343,18 @@ ul {
 
 .leading-top {
     margin-top: 1.5rem;
+}
+
+::-moz-selection {
+    background-color: #cde1ff;
+    color: #000;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #cde1ff;
+    color: #000;
+    text-shadow: none;
 }
 
 .container {
@@ -741,13 +741,13 @@ body > .container:last-child {
 
 [class^="icon-"]:before {
     position: relative;
-    top: .125rem;
     display: inline-block;
     font-size: 1rem;
     font-family: "icons";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
+    vertical-align: middle;
     line-height: .625;
     text-transform: none;
     speak: none;
@@ -2238,13 +2238,13 @@ html {
 
 [class^="social-"]:before {
     position: relative;
-    top: .125rem;
     display: inline-block;
     font-size: 1rem;
     font-family: "social";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
+    vertical-align: middle;
     line-height: .625;
     text-transform: none;
     speak: none;
