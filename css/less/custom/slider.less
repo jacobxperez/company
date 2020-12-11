@@ -115,20 +115,20 @@ body {
 // Responsive settings
 // ----------------------------------------------------------------------------/
 
-@media screen and (max-width: unit((@breakpoint-small-max-width / @root-font-size), em)) {
+@media screen and (max-width: unit((@screen-small-max-width / @root-font-size), em)) {
 	.prev-slide,
 	.next-slide {
 		display: none;
 	}
 }
 
-@media screen and (max-width: unit((@breakpoint-large-min-width / @root-font-size), em)) {
+@media screen and (max-width: unit((@screen-large-min-width / @root-font-size), em)) {
 	.slider {
 		.max-height(568px, @wrapper-max-width, vw);
 	}
 }
 
-@media screen and (min-height: unit((@breakpoint-large-min-width / @root-font-size), em)) {
+@media screen and (min-height: unit((@screen-large-min-width / @root-font-size), em)) {
 	.slider {
 		.max-height(568px, @wrapper-max-width, vw);
 	}
