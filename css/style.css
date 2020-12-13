@@ -641,8 +641,8 @@ body > .container:last-child {
 }
 
 .secondary-outline {
-    border-color: #222;
-    color: #222;
+    border-color: #22272e;
+    color: #22272e;
 }
 
 .success-outline {
@@ -676,7 +676,7 @@ body > .container:last-child {
 .button.secondary-outline:active,
 .button.secondary-outline:hover,
 .secondary-bg {
-    background-color: #222;
+    background-color: #22272e;
     color: #ffffff;
 }
 
@@ -713,7 +713,7 @@ body > .container:last-child {
 .button.secondary-bg.active,
 .button.secondary-bg:active,
 .button.secondary-bg:hover {
-    background-color: #151515;
+    background-color: #171b1f;
 }
 
 .button.success-bg.active,
