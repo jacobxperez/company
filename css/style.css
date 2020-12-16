@@ -51,10 +51,6 @@ body {
     background-color: #edeff2;
 }
 
-[hidden] {
-    display: none;
-}
-
 h1,
 h2,
 h3,
@@ -94,24 +90,6 @@ h6 {
     font-size: 1rem;
 }
 
-a {
-    text-decoration: none;
-    background-color: transparent;
-    color: #148f6a;
-    cursor: pointer;
-}
-
-a:active,
-a:hover {
-    outline: 0;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
-}
-
 b,
 strong {
     font-weight: 700;
@@ -132,7 +110,7 @@ dfn[title] {
 
 mark {
     background-color: #fc0;
-    color: #000;
+    color: #000000;
 }
 
 small,
@@ -315,6 +293,47 @@ input[type=button] {
 :not([type=submit]):invalid {
     border-color: #c00;
     box-shadow: none;
+}
+
+.button {
+    display: inline-block;
+    padding: .4375rem .75rem;
+    border: .0625rem solid transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.button:active,
+.button:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+.button:focus {
+    outline: thin dotted;
+    outline-offset: -0.125rem;
+}
+
+.link,
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #148f6a;
+    cursor: pointer;
+}
+
+.link:active,
+.link:hover,
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: underline;
+}
+
+.link:focus,
+a:focus {
+    outline: thin dotted;
+    outline-offset: -0.125rem;
 }
 
 .leading,
@@ -534,43 +553,6 @@ body > .container:last-child {
     }
 }
 
-.button {
-    display: inline-block;
-    padding: .4375rem .75rem;
-    border: .0625rem solid transparent;
-    color: #333;
-    cursor: pointer;
-}
-
-.button:active,
-.button:hover {
-    outline: 0;
-    text-decoration: none;
-}
-
-.button:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
-}
-
-.disabled {
-    border-color: #ddd;
-    background-color: #e6e6e6;
-    color: #999999;
-    cursor: not-allowed;
-}
-
-.disabled:active,
-.disabled:hover {
-    background-color: #e6e6e6;
-    color: #999999;
-    text-decoration: none;
-}
-
-.disabled:focus {
-    outline: 0;
-}
-
 .nav-link {
     display: block;
     padding: .5rem .75rem;
@@ -726,6 +708,24 @@ body > .container:last-child {
 .button.danger-bg:active,
 .button.danger-bg:hover {
     background-color: #b30000;
+}
+
+.disabled {
+    border-color: #ddd;
+    background-color: #e6e6e6;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.disabled:active,
+.disabled:hover {
+    background-color: #e6e6e6;
+    color: #999999;
+    text-decoration: none;
+}
+
+.disabled:focus {
+    outline: 0;
 }
 @font-face {
     font-family: 'icons';
@@ -1803,10 +1803,6 @@ body > .container:last-child {
 .content-evenly {
     justify-content: space-evenly;
 }
-
-.opacity {
-    opacity: .95;
-}
 @media screen and (max-width: 42.5em) {
     .lg-show,
     .md-down-hide,
@@ -1874,6 +1870,9 @@ body > .container:last-child {
 .button.primary:active,
 .button.primary:focus,
 .button.primary:hover,
+.link.primary:active,
+.link.primary:focus,
+.link.primary:hover,
 a.primary:active,
 a.primary:focus,
 a.primary:hover {
@@ -1887,6 +1886,9 @@ a.primary:hover {
 .button.facebook:active,
 .button.facebook:focus,
 .button.facebook:hover,
+.link.facebook:active,
+.link.facebook:focus,
+.link.facebook:hover,
 a.facebook:active,
 a.facebook:focus,
 a.facebook:hover {
@@ -1900,6 +1902,9 @@ a.facebook:hover {
 .button.twitter:active,
 .button.twitter:focus,
 .button.twitter:hover,
+.link.twitter:active,
+.link.twitter:focus,
+.link.twitter:hover,
 a.twitter:active,
 a.twitter:focus,
 a.twitter:hover {
@@ -1913,6 +1918,9 @@ a.twitter:hover {
 .button.instagram:active,
 .button.instagram:focus,
 .button.instagram:hover,
+.link.instagram:active,
+.link.instagram:focus,
+.link.instagram:hover,
 a.instagram:active,
 a.instagram:focus,
 a.instagram:hover {
@@ -1926,6 +1934,9 @@ a.instagram:hover {
 .button.pinterest:active,
 .button.pinterest:focus,
 .button.pinterest:hover,
+.link.pinterest:active,
+.link.pinterest:focus,
+.link.pinterest:hover,
 a.pinterest:active,
 a.pinterest:focus,
 a.pinterest:hover {
@@ -1939,6 +1950,9 @@ a.pinterest:hover {
 .button.linkedin:active,
 .button.linkedin:focus,
 .button.linkedin:hover,
+.link.linkedin:active,
+.link.linkedin:focus,
+.link.linkedin:hover,
 a.linkedin:active,
 a.linkedin:focus,
 a.linkedin:hover {
@@ -2076,17 +2090,21 @@ a.linkedin:hover {
     margin: 0;
 }
 
+.social-links .link,
 .social-links a,
 .social-links li {
     float: left;
     display: block;
 }
 
+.social-links .link,
 .social-links a {
     padding: .5rem .75rem;
     color: #edeff2;
 }
 
+.social-links .link:active,
+.social-links .link:hover,
 .social-links a:active,
 .social-links a:hover {
     color: #148f6a;
