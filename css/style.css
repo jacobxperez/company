@@ -1543,181 +1543,6 @@ body > .container:last-child {
     content: "\e0e5";
 }
 
-.inline {
-    display: inline;
-}
-
-.block {
-    display: block;
-}
-
-.max-width {
-    max-width: 100%;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-.relative {
-    position: relative;
-}
-
-.absolute {
-    position: absolute;
-}
-
-.fixed-bottom,
-.fixed-top {
-    left: 0;
-    right: 0;
-}
-
-.fixed-bottom,
-.fixed-top {
-    position: fixed;
-    z-index: 1025;
-}
-
-.fixed-top {
-    top: 0;
-}
-
-.fixed-top + .container {
-    margin-top: 6rem;
-}
-
-.fixed-top .container > ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.fixed-bottom {
-    bottom: 0;
-}
-
-.top {
-    bottom: 100%;
-}
-
-.bottom {
-    top: 100%;
-}
-
-.left {
-    left: 0;
-}
-
-.right {
-    right: 0;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-    hyphens: auto;
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
-}
-
-.flex-grow {
-    flex-grow: 1;
-}
-
-.content-start {
-    justify-content: start;
-}
-
-.content-end {
-    justify-content: end;
-}
-
-.content-center {
-    justify-content: center;
-}
-
-.content-stretch {
-    justify-content: stretch;
-}
-
-.content-around {
-    justify-content: space-around;
-}
-
-.content-between {
-    justify-content: space-between;
-}
-
-.content-evenly {
-    justify-content: space-evenly;
-}
-
-.self-start {
-    justify-self: start;
-}
-
-.self-end {
-    justify-self: end;
-}
-
-.self-center {
-    justify-self: center;
-}
-
-.self-stretch {
-    justify-self: stretch;
-}
-
-.align-start {
-    align-self: flex-start;
-}
-
-.align-end {
-    align-self: flex-end;
-}
-
-.align-center {
-    align-self: center;
-}
-
-.align-baseline {
-    align-self: baseline;
-}
-
-.align-stretch {
-    align-self: stretch;
-}
-
 .facebook,
 .instagram,
 .linkedin,
@@ -2307,6 +2132,181 @@ html {
 
 .social-vkontakte:before {
     content: "\e02d";
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.max-width {
+    max-width: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed-bottom,
+.fixed-top {
+    left: 0;
+    right: 0;
+}
+
+.fixed-bottom,
+.fixed-top {
+    position: fixed;
+    z-index: 1025;
+}
+
+.fixed-top {
+    top: 0;
+}
+
+.fixed-top + .container {
+    margin-top: 6rem;
+}
+
+.fixed-top .container > ul {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.fixed-bottom {
+    bottom: 0;
+}
+
+.top {
+    bottom: 100%;
+}
+
+.bottom {
+    top: 100%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.content-start {
+    justify-content: start;
+}
+
+.content-end {
+    justify-content: end;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-stretch {
+    justify-content: stretch;
+}
+
+.content-around {
+    justify-content: space-around;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+.content-evenly {
+    justify-content: space-evenly;
+}
+
+.self-start {
+    justify-self: start;
+}
+
+.self-end {
+    justify-self: end;
+}
+
+.self-center {
+    justify-self: center;
+}
+
+.self-stretch {
+    justify-self: stretch;
+}
+
+.align-start {
+    align-self: flex-start;
+}
+
+.align-end {
+    align-self: flex-end;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.align-baseline {
+    align-self: baseline;
+}
+
+.align-stretch {
+    align-self: stretch;
 }
 @media screen and (max-width: 42.5em) {
     .grid {
