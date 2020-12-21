@@ -538,7 +538,7 @@ body > .container:last-child {
 .button.primary-bg.active,
 .button.primary-bg:active,
 .button.primary-bg:hover {
-    background-color: #117959;
+    background-color: #17a57b;
 }
 
 .button.secondary-bg.active,
@@ -1526,25 +1526,8 @@ body > .container:last-child {
 .instagram,
 .linkedin,
 .pinterest,
-.primary,
 .twitter {
     color: #fff;
-}
-
-.primary {
-    background-color: #148f6a;
-}
-
-.button.primary:active,
-.button.primary:focus,
-.button.primary:hover,
-.link.primary:active,
-.link.primary:focus,
-.link.primary:hover,
-a.primary:active,
-a.primary:focus,
-a.primary:hover {
-    background-color: #17a57b;
 }
 
 .facebook {
