@@ -17,30 +17,32 @@
 @import "modules/social-font";
 
 
-// Grid Areas: Use this template to build your own grid
+// Grid Areas: Use this template to build your own custom grid
 // ----------------------------------------------------------------------------/
-// .@{wrapper-class} {
-//     grid-template-columns: repeat(3, 1fr);
+// .grid {
+//     display: grid;
+//     grid-gap: 1.25em;
+//     grid-template-columns: repeat(4, 1fr);
 //     grid-template-areas:
-//         "a a a"
-//         "b b c"
-//         "d d d";
+//         "a a a a"
+//         "b c c c"
+//         "d d d d";
 // }
 //
 // header {
 //     grid-area: a;
 // }
 //
-// main {
-//     grid-column: b;
+// aside {
+//     grid-area: b;
 // }
 //
-// aside {
-//     grid-row: c;
+// article {
+//     grid-area: c;
 // }
 //
 // footer {
-//     grid-column: d;
+//     grid-area: d;
 // }
 
 
@@ -48,6 +50,14 @@
 // ----------------------------------------------------------------------------/
 .small-screen () {
     // Add code or import styles for small screens
+
+    // .grid {
+    //     grid-template-areas:
+    //         "a a a a"
+    //         "b b b b"
+    //         "c c c c"
+    //         "d d d d";
+    // }
 }
 
 
