@@ -2,7 +2,8 @@
  * Copyright (C) 2020 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
-------------------------------------------------------------------------------*/
+==============================================================================*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -142,6 +143,44 @@ hr {
     border-top: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote {
+    font-size: 2rem;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    font-style: italic;
+}
+
+blockquote:after,
+blockquote:before {
+    content: '';
+    content: none;
+}
+
+blockquote small:before {
+    content: "— ";
+}
+
+blockquote small {
+    display: block;
+    line-height: 1.84615385;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+}
+
+pre {
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
 dl,
 ol,
 ul {
@@ -184,45 +223,6 @@ ul ul {
 
 nav ul {
     margin-bottom: 0;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-}
-
-pre {
-    overflow: auto;
-    white-space: pre-wrap;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote {
-    font-size: 2rem;
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    line-height: 1.5;
-    font-style: italic;
-}
-
-blockquote:after,
-blockquote:before {
-    content: '';
-    content: none;
-}
-
-blockquote small:before {
-    content: "— ";
-}
-
-blockquote small {
-    display: block;
-    line-height: 1.84615385;
 }
 
 table {
@@ -299,8 +299,7 @@ input[type=button] {
 
 .button {
     display: inline-block;
-    padding: .4375rem .75rem;
-    border: .0625rem solid transparent;
+    padding: .5rem .75rem;
     color: #333;
     cursor: pointer;
 }
@@ -385,7 +384,7 @@ body > .container:last-child {
 
 .grid {
     display: grid;
-    grid-gap: 1.25rem;
+    column-gap: 1.25rem;
 }
 
 .span-1 {
@@ -514,24 +513,11 @@ body > .container:last-child {
     color: #ffffff;
 }
 
-.button.border-success.active,
-.button.border-success:active,
-.button.border-success:hover,
-.success-bg {
-    background-color: #393;
-    color: #ffffff;
-}
-
-.warning-bg {
-    background-color: #fa0;
-    color: #000000;
-}
-
-.button.border-danger.active,
-.button.border-danger:active,
-.button.border-danger:hover,
-.danger-bg {
-    background-color: #c00;
+.button.border-tertiary.active,
+.button.border-tertiary:active,
+.button.border-tertiary:hover,
+.tertiary-bg {
+    background-color: #222;
     color: #ffffff;
 }
 
@@ -545,6 +531,36 @@ body > .container:last-child {
 .button.secondary-bg:active,
 .button.secondary-bg:hover {
     background-color: #171b1f;
+}
+
+.button.tertiary-bg.active,
+.button.tertiary-bg:active,
+.button.tertiary-bg:hover {
+    background-color: #171b1f;
+}
+
+.button.border-success.active,
+.button.border-success:active,
+.button.border-success:hover,
+.success-bg {
+    background-color: #393;
+    color: #ffffff;
+}
+
+.button.border-warning.active,
+.button.border-warning:active,
+.button.border-warning:hover,
+.warning-bg {
+    background-color: #fa0;
+    color: #000000;
+}
+
+.button.border-danger.active,
+.button.border-danger:active,
+.button.border-danger:hover,
+.danger-bg {
+    background-color: #c00;
+    color: #ffffff;
 }
 
 .button.success-bg.active,
@@ -566,7 +582,6 @@ body > .container:last-child {
 }
 
 .disabled {
-    border-color: #ddd;
     background-color: #e6e6e6;
     color: #999999;
     cursor: not-allowed;
@@ -1537,9 +1552,6 @@ body > .container:last-child {
 .button.facebook:active,
 .button.facebook:focus,
 .button.facebook:hover,
-.link.facebook:active,
-.link.facebook:focus,
-.link.facebook:hover,
 a.facebook:active,
 a.facebook:focus,
 a.facebook:hover {
@@ -1553,9 +1565,6 @@ a.facebook:hover {
 .button.twitter:active,
 .button.twitter:focus,
 .button.twitter:hover,
-.link.twitter:active,
-.link.twitter:focus,
-.link.twitter:hover,
 a.twitter:active,
 a.twitter:focus,
 a.twitter:hover {
@@ -1569,9 +1578,6 @@ a.twitter:hover {
 .button.instagram:active,
 .button.instagram:focus,
 .button.instagram:hover,
-.link.instagram:active,
-.link.instagram:focus,
-.link.instagram:hover,
 a.instagram:active,
 a.instagram:focus,
 a.instagram:hover {
@@ -1585,9 +1591,6 @@ a.instagram:hover {
 .button.pinterest:active,
 .button.pinterest:focus,
 .button.pinterest:hover,
-.link.pinterest:active,
-.link.pinterest:focus,
-.link.pinterest:hover,
 a.pinterest:active,
 a.pinterest:focus,
 a.pinterest:hover {
@@ -1601,9 +1604,6 @@ a.pinterest:hover {
 .button.linkedin:active,
 .button.linkedin:focus,
 .button.linkedin:hover,
-.link.linkedin:active,
-.link.linkedin:focus,
-.link.linkedin:hover,
 a.linkedin:active,
 a.linkedin:focus,
 a.linkedin:hover {
@@ -1741,21 +1741,17 @@ a.linkedin:hover {
     margin: 0;
 }
 
-.social-links .link,
 .social-links a,
 .social-links li {
     float: left;
     display: block;
 }
 
-.social-links .link,
 .social-links a {
     padding: .5rem .75rem;
     color: #edeff2;
 }
 
-.social-links .link:active,
-.social-links .link:hover,
 .social-links a:active,
 .social-links a:hover {
     color: #148f6a;
@@ -2104,27 +2100,6 @@ html {
     display: block;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
-}
-
-.flex-grow {
-    flex-grow: 1;
-}
-
 .border {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
@@ -2155,6 +2130,11 @@ html {
     color: #22272e;
 }
 
+.border-tertiary {
+    border-color: #222;
+    color: #222;
+}
+
 .border-success {
     border-color: #393;
     color: #393;
@@ -2168,6 +2148,27 @@ html {
 .border-danger {
     border-color: #c00;
     color: #c00;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-grow {
+    flex-grow: 1;
 }
 
 .text-left {
