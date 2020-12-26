@@ -3,7 +3,6 @@
 .button {
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
-    .border(@button-border-width; @button-border-style; @button-border-color);
     .border-radius(@button-border-radius);
     color: @button-color;
     cursor: pointer;
@@ -17,6 +16,6 @@
 
     &:focus {
         outline: thin dotted;
-        outline-offset: unit((-2px / @root-font-size), rem);
+        outline-offset: unit((-2px / @base-font-size), rem);
     }
 }

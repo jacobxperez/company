@@ -5,9 +5,8 @@ blockquote, q {
 }
 
 blockquote {
-    .font-size(@blockquote-font-size);
+    .font-size(@h3-font-size);
     .font-family(@blockquote-font-family);
-    .line-height(@blockquote-line-height; @blockquote-font-size);
     &:extend(.leading);
 
     & when not (@blockquote-font-style = false) {
@@ -26,6 +25,17 @@ blockquote {
 
     small {
         display: block;
-        .line-height(@base-line-height; @small-font-size);
+    }
+}
+
+.medium-blockquote () {
+    blockquote {
+        .font-size((ceil(@h3-font-size * @type-scale-medium)));
+    }
+}
+
+.large-blockquote () {
+    blockquote {
+        .font-size((ceil(@h3-font-size * @type-scale-large)));
     }
 }
