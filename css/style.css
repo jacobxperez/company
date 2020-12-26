@@ -63,22 +63,22 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 3.125rem;
+    font-size: 2.625rem;
 }
 
 .h2,
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.1875rem;
 }
 
 .h3,
 h3 {
-    font-size: 2rem;
+    font-size: 1.8125rem;
 }
 
 .h4,
 h4 {
-    font-size: 1.5625rem;
+    font-size: 1.5rem;
 }
 
 .h5,
@@ -93,7 +93,7 @@ h6 {
 
 b,
 strong {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 dfn,
@@ -118,7 +118,7 @@ mark {
 small,
 sub,
 sup {
-    font-size: .8125rem;
+    font-size: .75rem;
 }
 
 sub,
@@ -148,7 +148,7 @@ q {
 }
 
 blockquote {
-    font-size: 2rem;
+    font-size: 1.8125rem;
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
     font-style: italic;
 }
@@ -165,7 +165,6 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    line-height: 1.84615385;
 }
 
 code,
@@ -1737,7 +1736,7 @@ a.linkedin:hover {
 }
 
 .lead {
-    font-size: 2rem;
+    font-size: 1.8125rem;
 }
 
 .social-links {
@@ -2338,6 +2337,35 @@ html {
     }
 }
 @media screen and (min-width: 42.50390625em) and (max-width: 61.24609375em) {
+    .h1,
+    h1 {
+        font-size: 3.125rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2.625rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.125rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.8125rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.4375rem;
+    }
+
+    blockquote {
+        font-size: 2.625rem;
+    }
+
     .grid {
         grid-template-columns: repeat(8, 1fr);
     }
@@ -2381,6 +2409,35 @@ html {
     }
 }
 @media screen and (min-width: 61.25em) {
+    .h1,
+    h1 {
+        font-size: 3.5625rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2.9375rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.4375rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 2.0625rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.625rem;
+    }
+
+    blockquote {
+        font-size: 2.9375rem;
+    }
+
     .grid {
         grid-template-columns: repeat(12, 1fr);
     }
