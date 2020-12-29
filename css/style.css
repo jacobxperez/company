@@ -379,63 +379,6 @@ body > .container:last-child {
     margin-bottom: 6rem;
 }
 
-.grid {
-    display: grid;
-    column-gap: 1.25rem;
-}
-
-.span-1 {
-    grid-column: span 1;
-}
-
-.span-2 {
-    grid-column: span 2;
-}
-
-.span-3 {
-    grid-column: span 3;
-}
-
-.span-4 {
-    grid-column: span 4;
-}
-
-.span-5 {
-    grid-column: span 5;
-}
-
-.span-6 {
-    grid-column: span 6;
-}
-
-.span-7 {
-    grid-column: span 7;
-}
-
-.span-8 {
-    grid-column: span 8;
-}
-
-.span-9 {
-    grid-column: span 9;
-}
-
-.span-10 {
-    grid-column: span 10;
-}
-
-.span-11 {
-    grid-column: span 11;
-}
-
-.span-12 {
-    grid-column: span 12;
-}
-
-.span {
-    grid-column: 1 / -1;
-}
-
 .nav-link {
     display: block;
     padding: .5rem .75rem;
@@ -1618,7 +1561,7 @@ a.linkedin:hover {
     margin-bottom: 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 18.75rem;
+    width: 100%;
     background-color: #fff;
     text-align: center;
     border-radius: .25rem .25rem .25rem .25rem;
@@ -1733,10 +1676,6 @@ a.linkedin:hover {
     background-color: #2d343d;
     color: #edeff2;
     text-align: center;
-}
-
-.lead {
-    font-size: 1.8125rem;
 }
 
 .social-links {
@@ -2095,6 +2034,29 @@ html {
     content: "\e02d";
 }
 
+.grid {
+    display: grid;
+    column-gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a a a" "b c c" "d d d";
+}
+
+header {
+    grid-column: a;
+}
+
+aside {
+    grid-area: b;
+}
+
+article {
+    grid-area: c;
+}
+
+footer {
+    grid-column: d;
+}
+
 .inline {
     display: inline;
 }
@@ -2245,89 +2207,10 @@ html {
 .float-right {
     float: right;
 }
-
-.content-start {
-    justify-content: start;
-}
-
-.content-end {
-    justify-content: end;
-}
-
-.content-center {
-    justify-content: center;
-}
-
-.content-stretch {
-    justify-content: stretch;
-}
-
-.content-around {
-    justify-content: space-around;
-}
-
-.content-between {
-    justify-content: space-between;
-}
-
-.content-evenly {
-    justify-content: space-evenly;
-}
-
-.self-start {
-    justify-self: start;
-}
-
-.self-end {
-    justify-self: end;
-}
-
-.self-center {
-    justify-self: center;
-}
-
-.self-stretch {
-    justify-self: stretch;
-}
-
-.align-start {
-    align-self: flex-start;
-}
-
-.align-end {
-    align-self: flex-end;
-}
-
-.align-center {
-    align-self: center;
-}
-
-.align-baseline {
-    align-self: baseline;
-}
-
-.align-stretch {
-    align-self: stretch;
-}
 @media screen and (max-width: 42.5em) {
     .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .sm-span-1 {
-        grid-column: span 1;
-    }
-
-    .sm-span-2 {
-        grid-column: span 2;
-    }
-
-    .sm-span-3 {
-        grid-column: span 3;
-    }
-
-    .sm-span-4 {
-        grid-column: span 4;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a a" "b b" "c c" "d d";
     }
 
     .lg-block,
@@ -2367,39 +2250,8 @@ html {
     }
 
     .grid {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    .md-span-1 {
-        grid-column: span 1;
-    }
-
-    .md-span-2 {
-        grid-column: span 2;
-    }
-
-    .md-span-3 {
-        grid-column: span 3;
-    }
-
-    .md-span-4 {
-        grid-column: span 4;
-    }
-
-    .md-span-5 {
-        grid-column: span 5;
-    }
-
-    .md-span-6 {
-        grid-column: span 6;
-    }
-
-    .md-span-7 {
-        grid-column: span 7;
-    }
-
-    .md-span-8 {
-        grid-column: span 8;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a a" "b b" "c c" "d d";
     }
 
     .lg-block,
@@ -2436,58 +2288,6 @@ html {
 
     blockquote {
         font-size: 2.9375rem;
-    }
-
-    .grid {
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    .lg-span-1 {
-        grid-column: span 1;
-    }
-
-    .lg-span-2 {
-        grid-column: span 2;
-    }
-
-    .lg-span-3 {
-        grid-column: span 3;
-    }
-
-    .lg-span-4 {
-        grid-column: span 4;
-    }
-
-    .lg-span-5 {
-        grid-column: span 5;
-    }
-
-    .lg-span-6 {
-        grid-column: span 6;
-    }
-
-    .lg-span-7 {
-        grid-column: span 7;
-    }
-
-    .lg-span-8 {
-        grid-column: span 8;
-    }
-
-    .lg-span-9 {
-        grid-column: span 9;
-    }
-
-    .lg-span-10 {
-        grid-column: span 10;
-    }
-
-    .lg-span-11 {
-        grid-column: span 11;
-    }
-
-    .lg-span-12 {
-        grid-column: span 12;
     }
 
     .lg-none,
