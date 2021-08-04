@@ -1,29 +1,5 @@
-// Colors
+// Background Colors
 // ----------------------------------------------------------------------------/
-.primary-text {
-    color: @primary;
-}
-
-.secondary-text {
-    color: @secondary;
-}
-
-.tertiary-text {
-    color: @tertiary;
-}
-
-.success-text {
-    color: @success;
-}
-
-.warning-text {
-    color: @warning;
-}
-
-.danger-text {
-    color: @danger;
-}
-
 .primary {
     background-color: @primary;
     color: @primary-text;
@@ -52,17 +28,31 @@
     }
 }
 
-.tertiary {
-    background-color: @tertiary;
-    color: @tertiary-text;
+.light {
+    background-color: @light;
+    color: @light-text;
 }
 
-.tertiary-hover {
+.light-hover {
     &.active,
     &:hover,
     &:active {
-        background-color: @tertiary-hover;
-        color: @tertiary-text;
+        background-color: @light-hover;
+        color: @light-text;
+    }
+}
+
+.dark {
+    background-color: @dark;
+    color: @dark-text;
+}
+
+.dark-hover {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @dark-hover;
+        color: @dark-text;
     }
 }
 
@@ -108,6 +98,40 @@
     }
 }
 
+
+// Text Colors
+// ----------------------------------------------------------------------------/
+.primary-text {
+    color: @primary;
+}
+
+.secondary-text {
+    color: @secondary;
+}
+
+.light-text {
+    color: @light;
+}
+
+.dark-text {
+    color: @dark;
+}
+
+.success-text {
+    color: @success;
+}
+
+.warning-text {
+    color: @warning;
+}
+
+.danger-text {
+    color: @danger;
+}
+
+
+// Disabled
+// ----------------------------------------------------------------------------/
 .disabled {
     background-color: @disabled;
     color: @disabled-text;
@@ -117,7 +141,7 @@
     &:active {
         background-color: @disabled;
         color: @disabled-text;
-        text-decoration: none;
+        decoration: none;
     }
 
     &:focus {

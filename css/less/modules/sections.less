@@ -1,8 +1,8 @@
 // Sections
 // ----------------------------------------------------------------------------/
 .section {
-	.padding-bottom((@base-line-height * 3));
-	.padding-top((@base-line-height * 4));
+	.padding-bottom((@line-height * 3));
+	.padding-top((@line-height * 4));
 }
 
 .section:nth-child(even):not(.marketing) {
@@ -11,14 +11,14 @@
 
 .footer {
 	position: relative;
-	.padding-bottom((@base-line-height * 3));
-	.padding-top((@base-line-height * 4));
+	.padding-bottom((@line-height * 3));
+	.padding-top((@line-height * 4));
 	background-color: lighten(@font-color, 5%);
 	color: @background-color;
 }
 
 .small-footer {
-	.padding-top(@base-line-height);
+	.padding-top(@line-height);
 	background-color: @font-color;
 	color: @background-color;
 }

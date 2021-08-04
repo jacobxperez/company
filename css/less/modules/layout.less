@@ -1,0 +1,77 @@
+// Layout
+// ----------------------------------------------------------------------------/
+body > .wrapper:first-child {
+    .margin-top(@wrapper-margin-top);
+}
+
+body > .wrapper:last-child {
+    .margin-bottom(@wrapper-margin-bottom);
+}
+
+.fixed-top + .wrapper {
+        .margin-top(@line-height * 4);
+}
+
+.fixed-top .wrapper > ul {
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+}
+
+
+// Grid
+// ----------------------------------------------------------------------------/
+.grid {
+    display: grid;
+    .column-gap(@wrapper-gap);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "a a a"
+        "b c c"
+        "d d d";
+}
+
+header {
+    grid-column: a;
+}
+
+aside {
+    grid-area: b;
+}
+
+article {
+    grid-area: c;
+}
+
+footer {
+    grid-area: d;
+}
+
+
+// Small Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.small-layout () {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "a a"
+            "b b"
+            "c c"
+            "d d";
+    }
+
+}
+
+
+// Medium Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.medium-layout () {
+    // Add code
+}
+
+
+// Large Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.large-layout () {
+    // Add code
+}

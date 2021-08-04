@@ -18,69 +18,29 @@
 @import "modules/social-font";
 
 
-// Grid Areas: Use this template to build your own custom grid
+// Small Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.grid {
-    display: grid;
-    .column-gap(@container-gap);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        "a a a"
-        "b c c"
-        "d d d";
-}
-
-header {
-    grid-column: a;
-}
-
-aside {
-    grid-area: b;
-}
-
-article {
-    grid-area: c;
-}
-
-footer {
-    grid-column: d;
-}
-
-
-// Small Breakpoint
-// ----------------------------------------------------------------------------/
-.small-screen () {
-    // Add code or import styles for small screens
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "a a"
-            "b b"
-            "c c"
-            "d d";
+// @media screen and (max-width: unit((@screen-small-max-width / 16px), em)) {
+    .small-screen () {
+        // Add code for small screens
     }
-}
+// }
 
 
-// Medium Breakpoint
+// Medium Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.medium-screen () {
-    // Add code or import styles for medium screens
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "a a"
-            "b b"
-            "c c"
-            "d d";
+// @media screen and (min-width: unit((@screen-medium-min-width / 16px), em)) and (max-width: unit(((@screen-medium-max-width ) / 16px), em)) {
+    .medium-screen () {
+        // Add code for medium screens
     }
-}
+// }
 
 
-// Large Breakpoint
+// Large Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.large-screen () {
-    // Add code or import styles for large screens
-}
+// @media screen and (min-width: unit((@screen-large-min-width / 16px), em)) {
+    .large-screen () {
+        // Add code for large screens
+    }
+// }
+

@@ -4,7 +4,6 @@
     display: block;
     .padding(@nav-link-padding-y; @nav-link-padding-x);
     color: @nav-link-color;
-    .transition();
 
     &.active,
     &:hover,
@@ -14,19 +13,29 @@
     }
 }
 
-.alt-link {
-    color: @alt-link-color;
+.alpha-link {
+    color: @alpha-link;
 
     &.active,
     &:hover,
     &:active {
-        color: @alt-link-color-hover;
+        color: @alpha-link-hover;
+    }
+}
+
+.beta-link {
+    color: @beta-link;
+
+    &.active,
+    &:hover,
+    &:active {
+        color: @beta-link-hover;
     }
 }
 
 // mixin call for utilities
 .fixed-top-nav () {
-    .container > ul {
+    .wrapper > ul {
         .margin-left(-@nav-link-padding-x);
         .margin-right(-@nav-link-padding-x);
     }

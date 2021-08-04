@@ -4,11 +4,16 @@ dl,
 ol,
 ul {
     list-style-type: none;
+}
+
+.dl,
+.ol,
+.ul {
     &:extend(.leading);
 
-    dl,
-    ol,
-    ul {
+    .dl,
+    .ol,
+    .ul {
         margin-bottom: 0;
     }
 }
@@ -31,12 +36,6 @@ ul {
 
 .ol,
 .ul {
-    .padding-left(@base-line-height);
+    .padding-left(@line-height);
     list-style-position: outside;
-}
-
-nav {
-    ul {
-        margin-bottom: 0;
-    }
 }

@@ -1,44 +1,41 @@
 // Variables
-// Move edited variables to custom.less for easy update
 // ============================================================================/
 
 
-// Main Color Palette
+// Main Colors
 // ----------------------------------------------------------------------------/
 // background color
 // @background-color: #fff;
 
 // font color
 // @font-color: #555;
+// @link-color: @primary;
 
 // branding
-// @primary: #06f;
+// @primary: #05f;
 // @primary-text: contrast(@primary);
 // @primary-hover: darken(@primary, 5%);
 
-// @secondary: #003789;
+// @secondary: #555;
 // @secondary-text: contrast(@secondary);
 // @secondary-hover: darken(@secondary, 5%);
 
-// @tertiary: #222;
-// @tertiary-text: contrast(@tertiary);
-// @tertiary-hover: darken(@tertiary, 5%);
+// @light: #fff;
+// @light-text: @font-color;
+// @light-hover: darken(@light, 5%);
 
-// link
-// @link-color: @primary;
+// @dark: #252525;
+// @dark-text: contrast(@dark);
+// @dark-hover: darken(@dark, 5%);
 
 
 // Typography
 // ----------------------------------------------------------------------------/
-// font family
-// @base-font-family: @font-sans;
-
-// font size
-// @base-font-size: 16px;
-// @scale-font-size: clamp(1rem, 1vw, 1.25rem); // set to false to remove style
-
-// line height
-// @base-line-height: 24px;
+// main font
+// @font-family: @font-sans;
+// @font-size: 16px;
+// @font-scale: clamp(1rem, 1vw, 1.25rem); // default false
+// @line-height: 24px;
 
 // headings
 // @headings-font-family: false;
@@ -46,8 +43,33 @@
 
 // type scale
 // @type-scale-small: 1.2;
-// @type-scale-medium: 1.414;
-// @type-scale-large: 1.618;
+// @type-scale-medium: 1.25;
+// @type-scale-large: 1.3;
+
+// heading 1
+// @h1-font-size-small: (ceil(@h2-font-size-small * @type-scale-small));
+// @h1-font-size-medium: (ceil(@h2-font-size-medium * @type-scale-medium));
+// @h1-font-size-large: (ceil(@h2-font-size-large * @type-scale-large));
+
+// heading 2
+// @h2-font-size-small: (ceil(@h3-font-size-small * @type-scale-small));
+// @h2-font-size-medium: (ceil(@h3-font-size-medium * @type-scale-medium));
+// @h2-font-size-large: (ceil(@h3-font-size-large * @type-scale-large));
+
+// heading 3
+// @h3-font-size-small: (ceil(@h4-font-size-small * @type-scale-small));
+// @h3-font-size-medium: (ceil(@h4-font-size-medium * @type-scale-medium));
+// @h3-font-size-large: (ceil(@h4-font-size-large * @type-scale-large));
+
+// heading 4
+// @h4-font-size-small: (ceil(@h5-font-size-small * @type-scale-small));
+// @h4-font-size-medium: (ceil(@h5-font-size-medium * @type-scale-medium));
+// @h4-font-size-large: (ceil(@h5-font-size-large * @type-scale-large));
+
+// heading 5
+// @h5-font-size-small: (ceil(@font-size * @type-scale-small));
+// @h5-font-size-medium: (ceil(@font-size * @type-scale-medium));
+// @h5-font-size-large: (ceil(@font-size * @type-scale-large));
 
 // small
 // @small-font-size: 12px;
@@ -57,38 +79,34 @@
 // @mark-color: contrast(@mark-background);
 
 // hr
-// @hr-border-width: @base-border-width;
-// @hr-border-color: @base-border-color;
+// @hr-border-width: @border-width;
+// @hr-border-color: @border-color;
 
 
-// Page Container
+// Page wrapper
 // ----------------------------------------------------------------------------/
-// @container-margin-top: @base-line-height * 2;
-// @container-margin-bottom: @base-line-height * 4;
-// @container-gap: 20px;
+// @wrapper-margin-top: @line-height * 2;
+// @wrapper-margin-bottom: @line-height * 4;
+// @wrapper-gap: 20px;
 
 // min width
-// @container-min-width: (280px + (@container-gap * 2));
+// @wrapper-min-width: (280px + (@wrapper-gap * 2));
 
 // max width
-// @container-max-width: (940px + (@container-gap * 2));
+// @wrapper-max-width: (940px + (@wrapper-gap * 2));
 
 
-// Grid System
+// Breakpoints
 // ----------------------------------------------------------------------------/
-// @grid-wrapper-class: grid;
-// @grid-column-class: span-;
-// @grid-column-gap: @container-gap;
-// @grid-row-gap: false;
+// small screen
+// @screen-small-max-width: (640px + (@wrapper-gap * 2));
 
-// small grid
-// @small-columns: 4;
+// medium screen
+// @screen-medium-min-width: (@screen-small-max-width + 1 / @font-size);
+// @screen-medium-max-width: (@screen-large-min-width - 1 / @font-size);
 
-// medium grid
-// @medium-columns: 8;
-
-// large grid
-// @large-columns: 12;
+// large screens
+// @screen-large-min-width: (@wrapper-max-width);
 
 
 // Responsive Prefix
@@ -103,36 +121,23 @@
 // @large-prefix: lg-;
 
 
-// Breakpoints
-// ----------------------------------------------------------------------------/
-// small screen
-// @screen-small-max-width: (640px + (@container-gap * 2));
-
-// medium screen
-// @screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
-// @screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
-
-// large screens
-// @screen-large-min-width: (@container-max-width);
-
-
 // Box Model
 // ----------------------------------------------------------------------------/
 // margins
-// @base-margin-y: 20px;
-// @base-margin-x: 20px;
+// @margin-y: 20px;
+// @margin-x: 20px;
 
 // paddings
-// @base-padding-y: 8px;
-// @base-padding-x: 12px;
+// @padding-y: 8px;
+// @padding-x: 12px;
 
 // borders
-// @base-border-width: 1px;
-// @base-border-color: rgba(0, 0, 0, 0.3);
-// @base-border-radius: 4px;
+// @border-width: 1px;
+// @border-color: rgba(0, 0, 0, 0.3);
+// @border-radius: 4px;
 
 
-// List ul, li, dl
+// Lists
 // ----------------------------------------------------------------------------/
 // order list
 // @ol-list-style-type: decimal;
@@ -161,32 +166,35 @@
 
 // Table
 // ----------------------------------------------------------------------------/
-// @table-cell-padding-y: @base-padding-y;
-// @table-cell-padding-x: @base-padding-x;
+// @table-cell-padding-y: @padding-y;
+// @table-cell-padding-x: @padding-x;
 
 
 // Form
 // ----------------------------------------------------------------------------/
 // @form-background-color: false;
 // @form-color: false;
-// @form-padding-y: @base-padding-y;
-// @form-padding-x: @base-padding-x;
-// @form-border-width: @base-border-width;
-// @form-border-color: @base-border-color;
+// @form-padding-y: @padding-y;
+// @form-padding-x: @padding-x;
+// @form-border-width: @border-width;
+// @form-border-color: @border-color;
 // @form-border-color-focus: rgba(0, 0, 0, 0.5);
-// @form-border-radius: @base-border-radius; // default false
+// @form-border-radius: @border-radius; // default false
 
 
 // Nav
 // ----------------------------------------------------------------------------/
 // @nav-link-color: @link-color;
 // @nav-link-color-hover: @font-color;
-// @nav-link-padding-y: @base-padding-y;
-// @nav-link-padding-x: @base-padding-x;
+// @nav-link-padding-y: @padding-y;
+// @nav-link-padding-x: @padding-x;
 
-// alternative link
-// @alt-link-color: @background-color;
-// @alt-link-color-hover: darken(@alt-link-color, 25%);
+// links
+// @alpha-link: @light;
+// @alpha-link-hover: darken(@alpha-link, 25%);
+
+// @beta-link: @dark;
+// @beta-link-hover: lighten(@beta-link, 25%);
 
 
 // Breadcrumb
@@ -197,9 +205,14 @@
 // Button
 // ----------------------------------------------------------------------------/
 // @button-color: @font-color;
-// @button-padding-y: @base-padding-y;
-// @button-padding-x: @base-padding-x;
-// @button-border-radius: @base-border-radius; // default false
+// @button-padding-y: @padding-y;
+// @button-padding-x: @padding-x;
+// @button-border-radius: @border-radius; // default false
+
+
+// Dropdown
+// ----------------------------------------------------------------------------/
+// @drop-box-width: 160px;
 
 
 // Call to Action Colors
@@ -220,16 +233,11 @@
 // @disabled-text: lighten(contrast(@disabled), 60%);
 
 
-// Drop Box
-// ----------------------------------------------------------------------------/
-// @drop-box-min-width: 160px;
-
-
 // Iconography
 // ----------------------------------------------------------------------------/
 // @icon-font-name: "icons";
 // @icon-font-path: "../fonts/icons/";
-// @icon-font-size: @base-font-size;
+// @icon-font-size: @font-size;
 // @icon-line-height: 10px;
 
 
