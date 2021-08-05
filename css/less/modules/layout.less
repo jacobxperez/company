@@ -1,12 +1,12 @@
 // Layout
 // ----------------------------------------------------------------------------/
-body > .wrapper:first-child {
-    .margin-top(@wrapper-margin-top);
-}
+// body > .wrapper:first-child {
+//     .margin-top(@wrapper-margin-top);
+// }
 
-body > .wrapper:last-child {
-    .margin-bottom(@wrapper-margin-bottom);
-}
+// body > .wrapper:last-child {
+//     .margin-bottom(@wrapper-margin-bottom);
+// }
 
 .fixed-top + .wrapper {
         .margin-top(@line-height * 4);
@@ -23,27 +23,17 @@ body > .wrapper:last-child {
 .grid {
     display: grid;
     .column-gap(@wrapper-gap);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        "a a a"
-        "b c c"
-        "d d d";
-}
+    grid-template-columns: repeat(4, 1fr);
 
-header {
-    grid-column: a;
-}
+    header,
+    footer {
+        grid-column: 1 ~"/" -1;
+    }
 
-aside {
-    grid-area: b;
-}
-
-article {
-    grid-area: c;
-}
-
-footer {
-    grid-area: d;
+    article,
+    section {
+        grid-column: span 3;
+    }
 }
 
 
@@ -53,11 +43,13 @@ footer {
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "a a"
-            "b b"
-            "c c"
-            "d d";
+
+        article,
+        section,
+        aside,
+        nav {
+            grid-column: 1 ~"/" -1;
+        }
     }
 
 }
