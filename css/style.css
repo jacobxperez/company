@@ -388,7 +388,7 @@ body>.wrapper:last-child {
 .alpha-link.active,
 .alpha-link:hover,
 .alpha-link:active {
-    color: #bfbfbf;
+    color: #148f6a;
 }
 
 .beta-link {
@@ -1686,35 +1686,6 @@ a.linkedin:active,
     background-color: #2d343d;
     color: #edeff2;
     text-align: center;
-}
-
-.social-links {
-    position: relative;
-    float: right;
-    margin: 0;
-}
-
-.social-links li,
-.social-links a {
-    float: left;
-    display: block;
-}
-
-.social-links a {
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    color: #edeff2;
-}
-
-.social-links a:hover,
-.social-links a:active {
-    color: #148f6a;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 42.5em) {
-    .social-links {
-        float: left;
-    }
 }
 
 html,
