@@ -4,7 +4,7 @@ A single page website template for your company marketing, built with [Essential
 
 ## LICENSE
 
-Copyright (C) 2020 [Jacob Perez](https://github.com/jacobxperez)
+Copyright (C) 2021 [Jacob Perez](https://github.com/jacobxperez)
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License");
 you may not use this file except in compliance with the License.
