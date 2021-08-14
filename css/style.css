@@ -1478,6 +1478,11 @@ body>.wrapper:last-child {
     content: "\e0e5";
 }
 
+.wrapper {
+    display: grid;
+    column-gap: 1.25rem;
+}
+
 .grid {
     display: grid;
     column-gap: 1.25rem;
@@ -1492,6 +1497,10 @@ body>.wrapper:last-child {
 .grid article,
 .grid section {
     grid-column: span 2;
+}
+
+.small-footer .wrapper {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .facebook,

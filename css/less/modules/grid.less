@@ -1,5 +1,10 @@
 // Grid
 // ----------------------------------------------------------------------------/
+.wrapper {
+    display: grid;
+    .column-gap(@wrapper-gap);
+}
+
 .grid {
     display: grid;
     .column-gap(@wrapper-gap);
@@ -14,6 +19,10 @@
     section {
         grid-column: span 2;
     }
+}
+
+.small-footer .wrapper {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
