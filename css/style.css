@@ -1478,11 +1478,6 @@ body>.wrapper:last-child {
     content: "\e0e5";
 }
 
-.wrapper {
-    display: grid;
-    column-gap: 1.25rem;
-}
-
 .grid {
     display: grid;
     column-gap: 1.25rem;
@@ -1499,7 +1494,7 @@ body>.wrapper:last-child {
     grid-column: span 2;
 }
 
-.small-footer .wrapper {
+.small-footer>.grid {
     grid-template-columns: repeat(2, 1fr);
 }
 

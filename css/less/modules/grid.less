@@ -1,10 +1,5 @@
 // Grid
 // ----------------------------------------------------------------------------/
-.wrapper {
-    display: grid;
-    .column-gap(@wrapper-gap);
-}
-
 .grid {
     display: grid;
     .column-gap(@wrapper-gap);
@@ -21,7 +16,7 @@
     }
 }
 
-.small-footer .wrapper {
+.small-footer > .grid {
     grid-template-columns: repeat(2, 1fr);
 }
 
