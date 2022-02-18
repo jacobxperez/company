@@ -2,21 +2,33 @@
 // ----------------------------------------------------------------------------/
 .flex {
     display: flex;
+}
+
+.flex-wrap {
     flex-wrap: wrap;
 }
 
-.row-reverse {
-    flex-direction: row-reverse;
+.flex-end {
+    justify-content: flex-end;
 }
 
-.flex-column {
-    flex-direction: column;
+.flex-center {
+    justify-content: center;
 }
 
-.column-reverse {
-    flex-direction: column-reverse;
+.flex-space-between {
+    justify-content: space-between;
 }
 
-.flex-grow {
+.flex-space-around{
+    justify-content: space-around;
+}
+
+.flex-space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-grow,
+.flex-grow-children > * {
     flex-grow: 1;
 }
