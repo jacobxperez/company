@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="INDEX, FOLLOW">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Jacob Perez">
     <title>Company</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -49,7 +49,7 @@
     <!-- end Navbar -->
 
     <!-- Slider -->
-    <article class="slider">
+    <section class="slider">
         <section class="slide">
             <img src="img/slider/1.jpg" alt="">
 
@@ -86,7 +86,7 @@
             <span class="prev-slide"></span>
             <span class="next-slide"></span>
         </nav>
-    </article>
+    </section>
     <!-- end Slider -->
 
     <!-- About -->
@@ -295,24 +295,13 @@
             <section class="grid">
                 <article>
                     <form action="contact.php" method="post">
-                        <p>
-                            <lable>Name</lable>
-                            <input name="name" autocomplete="off" placeholder="Required" type="text">
-                        </p>
+                        <input class="leading" name="name" autocomplete="off" placeholder="Name" type="text">
 
-                        <p>
-                            <lable>Email</lable>
-                            <input name="email" autocomplete="off" placeholder="Required" type="text">
-                        </p>
+                        <input class="leading" name="email" autocomplete="off" placeholder="Email" type="text">
 
-                        <p>
-                            <lable>Message</lable>
-                            <textarea name="message" placeholder="Required"></textarea>
-                        </p>
+                        <textarea class="leading" name="message" placeholder="Message"></textarea>
 
-                        <p>
-                            <input class="button primary primary-hover" value="Send" type="submit">
-                        </p>
+                        <input class="button primary primary-hover" value="Send" type="submit">
                     </form>
                 </article>
 
