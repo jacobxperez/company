@@ -199,7 +199,7 @@ ul {
     list-style-type: decimal;
 }
 
-.ol>li>.ol {
+.ol>li:first-child>.ol {
     list-style-type: hebrew;
 }
 
@@ -207,7 +207,7 @@ ul {
     list-style-type: disc;
 }
 
-.ul>li>.ul {
+.ul>li:first-child>.ul {
     list-style-type: circle;
 }
 
@@ -292,6 +292,7 @@ select,
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     background-color: transparent;
     color: #333;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -361,6 +362,25 @@ body>.wrapper:first-child {
 
 body>.wrapper:last-child {
     margin-bottom: 6rem;
+}
+
+.nav {
+    background-color: #e6e6e6;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav>.nav-link {
+    display: inline-block;
+}
+
+.nav.top+.wrapper {
+    margin-top: 6rem;
+}
+
+.nav .wrapper>ul {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
 }
 
 .nav-link {
@@ -2030,8 +2050,40 @@ body {
     margin: 1.25rem 1.25rem 1.25rem 1.25rem;
 }
 
+.margin-top {
+    margin-top: 1.25rem;
+}
+
+.margin-right {
+    margin-right: 1.25rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1.25rem;
+}
+
+.margin-left {
+    margin-left: 1.25rem;
+}
+
 .padding {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.padding-top {
+    margin-top: 0.5rem;
+}
+
+.padding-right {
+    padding-right: 0.75rem;
+}
+
+.padding-bottom {
+    padding-bottom: 0.5rem;
+}
+
+.padding-left {
+    padding-left: 0.75rem;
 }
 
 .max-width {
@@ -2090,6 +2142,10 @@ body {
     display: block;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 .flex {
     display: flex;
 }
@@ -2110,29 +2166,21 @@ body {
     flex-wrap: wrap;
 }
 
-.flex-end {
-    justify-content: flex-end;
-}
-
-.flex-center {
-    justify-content: center;
-}
-
-.flex-space-between {
-    justify-content: space-between;
-}
-
-.flex-space-around {
-    justify-content: space-around;
-}
-
-.flex-space-evenly {
-    justify-content: space-evenly;
-}
-
 .flex-grow,
 .flex-grow-children>* {
     flex-grow: 1;
+}
+
+.gap {
+    gap: 1.25rem;
+}
+
+.row-gap {
+    row-gap: 1.25rem;
+}
+
+.column-gap {
+    column-gap: 1.25rem;
 }
 
 .text-left {
@@ -2166,21 +2214,6 @@ body {
 
 .sticky {
     position: sticky;
-}
-
-.fixed+.wrapper {
-    margin-top: 6rem;
-}
-
-.fixed .wrapper>ul,
-.sticky .wrapper>ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.fixed.top,
-.fixed.bottom {
-    z-index: 1000;
 }
 
 .top {
