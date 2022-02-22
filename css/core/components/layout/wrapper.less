@@ -16,15 +16,3 @@ body > .wrapper:first-child {
 body > .wrapper:last-child {
     .margin-bottom(@wrapper-margin-bottom);
 }
-
-.fix-wrapper () {
-    .fixed + .wrapper {
-        .margin-top(@line-height * 4);
-    }
-    
-    .fixed .wrapper > ul,
-    .sticky .wrapper > ul {
-        .margin-left(-@nav-link-padding-x);
-        .margin-right(-@nav-link-padding-x);
-    }
-}
