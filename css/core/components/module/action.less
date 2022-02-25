@@ -6,7 +6,6 @@
 }
 
 .success-hover {
-    li.active > &,
     &.active,
     &:hover,
     &:active {
@@ -21,7 +20,6 @@
 }
 
 .warning-hover {
-    li.active > &,
     &.active,
     &:hover,
     &:active {
@@ -36,7 +34,6 @@
 }
 
 .danger-hover {
-    li.active > &,
     &.active,
     &:hover,
     &:active {
@@ -61,21 +58,32 @@
 }
 
 
+// Borders
+// ----------------------------------------------------------------------------/
+.border-action() {
+    .border-success {
+        border-color: @success;
+    }
+    
+    .border-warning {
+        border-color: @warning;
+    }
+    
+    .border-danger {
+        border-color: @danger;
+    }
+}
+
+
 // Disabled
 // ----------------------------------------------------------------------------/
-.disabled {
+.disabled,
+.disabled:hover,
+.disabled:active,
+.disabled:focus {
     background-color: @disabled;
     color: @disabled-text;
+    text-decoration: none;
+    outline: 0;
     cursor: not-allowed;
-
-    &:hover,
-    &:active {
-        background-color: @disabled;
-        color: @disabled-text;
-        text-decoration: none;
-    }
-
-    &:focus {
-        outline: 0;
-    }
 }
