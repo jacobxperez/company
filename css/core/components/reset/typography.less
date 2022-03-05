@@ -10,6 +10,9 @@ h3,
 h4,
 h5,
 h6 {
+    & when (iscolor(@headings-font-color)) {
+        color: @headings-font-color;
+    }
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
     &:extend(.leading);
@@ -96,9 +99,9 @@ sub {
 hr {
     box-sizing: content-box;
     display: block;
+    .margin(@line-height; 0);
     height: 1px;
     .border-top(@hr-border-width; solid; @hr-border-color);
-    &:extend(.leading);
 }
 
 .medium-type-scale () {

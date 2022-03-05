@@ -1,3 +1,18 @@
+// Text Colors
+// ----------------------------------------------------------------------------/
+.text-tertiary {
+    color: @tertiary;
+}
+
+.text-secondary {
+    color: @secondary;
+}
+
+.text-primary {
+    color: @primary;
+}
+
+
 // Background Colors
 // ----------------------------------------------------------------------------/
 .tertiary {
@@ -42,17 +57,12 @@
     }
 }
 
-
-// Text Colors
-// ----------------------------------------------------------------------------/
-.tertiary-text {
-    color: @tertiary;
-}
-
-.secondary-text {
-    color: @secondary;
-}
-
-.primary-text {
-    color: @primary;
+.tertiary-hover,
+.secondary-hover,
+.primary-hover {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+    }
 }

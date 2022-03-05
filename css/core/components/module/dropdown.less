@@ -1,15 +1,38 @@
 // Dropdown
 // ----------------------------------------------------------------------------/
-.drop-box {
+.dropdown {
     display: none;
+    visibility: hidden;
     margin-bottom: 0;
-    .min-width(@drop-box-width);
+    .min-width(@dropdown-width);
     background-color: transparent;
     color: @font-color;
     z-index: 100;
+
+    &.top {
+        top: auto;
+        bottom: 100%;
+    }
+
+    &.bottom {
+        bottom: auto;
+        top: 100%;
+    }
 }
 
-// added by javascript
-.active + .drop-box {
+.box {
+    .padding();
+    background-color: @box-background-color;
+}
+
+[data-dropdown="tooltip"] {
+    position: relative;
+    &:extend(abbr[title]);
+}
+
+[data-dropdown="tooltip"]:hover > .dropdown,
+.active > .dropdown,
+.active + .dropdown {
     display: block;
+    visibility: visible;
 }

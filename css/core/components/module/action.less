@@ -1,3 +1,18 @@
+// Text Colors
+// ----------------------------------------------------------------------------/
+.text-success {
+    color: @success;
+}
+
+.text-warning {
+    color: @warning;
+}
+
+.text-danger {
+    color: @danger;
+}
+
+
 // Background Colors
 // ----------------------------------------------------------------------------/
 .success {
@@ -43,24 +58,9 @@
 }
 
 
-// Text Colors
-// ----------------------------------------------------------------------------/
-.success-text {
-    color: @success;
-}
-
-.warning-text {
-    color: @warning;
-}
-
-.danger-text {
-    color: @danger;
-}
-
-
 // Borders
 // ----------------------------------------------------------------------------/
-.border-action() {
+.action-borders() {
     .border-success {
         border-color: @success;
     }
@@ -72,11 +72,22 @@
     .border-danger {
         border-color: @danger;
     }
+
+    .success-hover,
+    .warning-hover,
+    .danger-hover {
+        &.active,
+        &:hover,
+        &:active {
+            border-color: @border-color;
+        }
+    }
 }
 
 
 // Disabled
 // ----------------------------------------------------------------------------/
+:disabled,
 .disabled,
 .disabled:hover,
 .disabled:active,
