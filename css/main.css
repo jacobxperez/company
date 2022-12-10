@@ -650,11 +650,9 @@ body > [data-wrapper]:last-child {
   border: 0;
 }
 
-.scroll-top {
+[data-button~="scroll"] {
   width: 3.75rem;
   height: 3.75rem;
-  color: #fff;
-  background-color: #148f6a;
   border-radius: 100%;
   margin-left: -1.875rem;
   transition: background-color .3s ease-in-out;
@@ -665,7 +663,7 @@ body > [data-wrapper]:last-child {
   box-shadow: 0 0 .3125em #0000004d;
 }
 
-.scroll-top:before {
+[data-button~="scroll"]:before {
   width: .875rem;
   height: .875rem;
   content: "";
@@ -679,11 +677,7 @@ body > [data-wrapper]:last-child {
   transform: rotate(45deg);
 }
 
-.scroll-top:hover {
-  background-color: #17a57b;
-}
-
-.scroll-top:active {
+[data-button~="scroll"]:active {
   box-shadow: none;
 }
 
