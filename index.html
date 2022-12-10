@@ -13,32 +13,30 @@
 
 <body id="top">
     <!-- Navbar -->
-    <nav class="nav fixed top secondary">
-        <ul class="flex">
-            <li><a class="nav-link tap" href="#top">Company</a></li>
+    <nav data-navbar="top">
+        <ul data-flex="navbar">
+            <li><a data-link="navbar" href="#top">Company</a></li>
 
-            <li class="flex-grow"></li>
+            <li data-item="grow"></li>
 
-            <li class="sm-none"><a href="#about" class="nav-link tap">About</a></li>
-            <li class="sm-none"><a href="#features" class="nav-link tap">Features</a></li>
-            <li class="sm-none"><a href="#services" class="nav-link tap">Services</a></li>
-            <li class="sm-none"><a href="#plans" class="nav-link tap">Plans</a></li>
-            <li class="sm-none"><a href="#contact" class="nav-link tap">Contact</a></li>
+            <li data-display="small-none"><a href="#about" data-link="navbar">About</a></li>
+            <li data-display="small-none"><a href="#features" data-link="navbar">Features</a></li>
+            <li data-display="small-none"><a href="#services" data-link="navbar">Services</a></li>
+            <li data-display="small-none"><a href="#plans" data-link="navbar">Plans</a></li>
+            <li data-display="small-none"><a href="#contact" data-link="navbar">Contact</a></li>
 
 
             <!-- Dropdown Menu: show on small screens -->
-            <li class="sm-display">
-                <a class="icon-menu nav-link" data-dropdown="menu"></a>
+            <li data-display="small">
+                <a data-link="navbar" data-icon="&#xe081;" data-toggle="pop"></a>
 
-                <div class="drop-box secondary absolute left right">
-                    <ul>
-                        <li><a href="#about" class="nav-link tap">About</a></li>
-                        <li><a href="#features" class="nav-link tap">Features</a></li>
-                        <li><a href="#services" class="nav-link tap">Services</a></li>
-                        <li><a href="#plans" class="nav-link tap">Plans</a></li>
-                        <li><a href="#contact" class="nav-link tap">Contact</a></li>
-                    </ul>
-                </div>
+                <ul data-navbar="sub" data-dropbox="menu" data-position="absolute left right">
+                    <li><a href="#about" data-link="navbar">About</a></li>
+                    <li><a href="#features" data-link="navbar">Features</a></li>
+                    <li><a href="#services" data-link="navbar">Services</a></li>
+                    <li><a href="#plans" data-link="navbar">Plans</a></li>
+                    <li><a href="#contact" data-link="navbar">Contact</a></li>
+                </ul>
             </li>
             <!-- End Dropdown Menu -->
         </ul>
@@ -73,7 +71,6 @@
 
         <section class="slide">
             <img src="img/slider/4.jpg" alt="">
-
             <div class="slide-content">
                 <p class="slide-title">Mobile Ready</p>
             </div>
@@ -88,10 +85,10 @@
 
     <!-- About -->
     <section id="about" class="section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>About</h1>
 
-            <p class="h4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            <p data-text="medium">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                 vitae dicta sunt explicabo.
             </p>
@@ -101,10 +98,10 @@
 
     <!-- Features -->
     <section id="features" class="section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>Features</h1>
 
-            <section class="grid">
+            <section data-grid="main">
                 <div>
                     <p><strong>Fully Resposive</strong></p>
 
@@ -147,10 +144,10 @@
 
     <!-- Services -->
     <section id="services" class="section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>Services</h1>
 
-            <section class="grid">
+            <section data-grid="main">
                 <div>
                     <p><strong>Web Design</strong></p>
 
@@ -189,10 +186,10 @@
 
     <!-- Plans -->
     <section id="plans" class="section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>Plans</h1>
 
-            <section class="grid">
+            <section data-grid="main">
                 <div class="plan-card">
                     <div class="plan-header">
                         <p class="plan-title">Starter</p>
@@ -212,7 +209,7 @@
                     </ul>
 
                     <footer class="plan-footer">
-                        <a class="button primary primary-hover" href="">Get Started</a>
+                        <a data-button="primary" href="">Get Started</a>
                     </footer>
                 </div>
 
@@ -235,7 +232,7 @@
                     </ul>
 
                     <footer class="plan-footer">
-                        <a class="button primary primary-hover" href="">Get Started</a>
+                        <a data-button="primary" href="">Get Started</a>
                     </footer>
                 </div>
 
@@ -260,7 +257,7 @@
                     </ul>
 
                     <footer class="plan-footer">
-                        <a class="button primary primary-hover" href="">Get Started</a>
+                        <a data-button="primary" href="">Get Started</a>
                     </footer>
                 </div>
             </section>
@@ -270,7 +267,7 @@
 
     <!-- Marketing -->
     <section class="marketing section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>Get This Template</h1>
 
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
@@ -278,27 +275,27 @@
                 explicabo. Nemo enim ipsam
                 voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
 
-            <p><a href="https://github.com/jacobxperez/company/archive/master.zip"
-                    class="button primary primary-hover">Download</a></p>
+            <p><a href="https://github.com/jacobxperez/company/archive/master.zip" data-button="primary">Download</a>
+            </p>
         </div>
     </section>
     <!-- end Marketing -->
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <div class="wrapper">
+        <div data-wrapper="fit">
             <h1>Contact</h1>
 
-            <section class="grid">
+            <section data-grid="main">
                 <article>
                     <form action="contact.php" method="post">
-                        <input class="leading" name="name" autocomplete="off" placeholder="Name" type="text">
+                        <input data-leading name="name" autocomplete="off" placeholder="Name" type="text">
 
-                        <input class="leading" name="email" autocomplete="off" placeholder="Email" type="text">
+                        <input data-leading name="email" autocomplete="off" placeholder="Email" type="text">
 
-                        <textarea class="leading" name="message" placeholder="Message"></textarea>
+                        <textarea data-leading name="message" placeholder="Message"></textarea>
 
-                        <input class="button primary primary-hover" value="Send" type="submit">
+                        <input data-button="primary" value="Send" type="submit">
                     </form>
                 </article>
 
@@ -327,20 +324,20 @@
                     </p>
 
                     <p>
-                        <a href="https://www.facebook.com/" target="_blank" class="button facebook"><span
-                                class="social-facebook"></span></a>
+                        <a href="https://www.facebook.com/" target="_blank" data-button="facebook"><span
+                                data-social="facebook"></span></a>
 
-                        <a href="https://twitter.com/" target="_blank" class="button twitter"><span
-                                class="social-twitter"></span></a>
+                        <a href="https://twitter.com/" target="_blank" data-button="twitter"><span
+                                data-social="twitter"></span></a>
 
-                        <a href="https://www.instagram.com/" target="_blank" class="button instagram"><span
-                                class="social-instagram"></span></a>
+                        <a href="https://www.instagram.com/" target="_blank" data-button="instagram"><span
+                                data-social="instagram"></span></a>
 
-                        <a href="https://www.pinterest.com/" target="_blank" class="button pinterest"><span
-                                class="social-pinterest"></span></a>
+                        <a href="https://www.pinterest.com/" target="_blank" data-button="pinterest"><span
+                                data-social="pinterest"></span></a>
 
-                        <a href="https://www.linkedin.com/" target="_blank" class="button linkedin"><span
-                                class="social-linkedin"></span></a>
+                        <a href="https://www.linkedin.com/" target="_blank" data-button="linkedin"><span
+                                data-social="linkedin"></span></a>
                     </p>
                 </aside>
             </section>
@@ -353,8 +350,8 @@
         <div class="footer">
             <a href="#top" class="scroll-top"></a>
 
-            <div class="wrapper">
-                <div class="grid">
+            <div data-wrapper="fit">
+                <div data-grid="main">
                     <div>
                         <p><strong>About</strong></p>
 
@@ -386,8 +383,8 @@
         </div>
 
         <div class="small-footer">
-            <div class="wrapper flex flex-wrap">
-                <p class="flex-grow">
+            <div data-wrapper="fit" data-flex="wrap">
+                <p data-item="grow">
                     <small>&copy; 2022 <a href="https://github.com/jacobxperez/company">Company</a>. All Rights
                         Reserved. | Design by <a href="https://github.com/jacobxperez" rel="author">Jacob
                             Perez</a>
@@ -395,26 +392,21 @@
                 </p>
 
                 <nav>
-                    <ul class="flex">
+                    <ul data-flex>
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank"
-                                class="social-facebook nav-link tap"></a>
+                            <a href="https://www.facebook.com/" target="_blank" data-link data-social="facebook"></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/" target="_blank"
-                                class="social-twitter nav-link tap"></a>
+                            <a href="https://twitter.com/" target="_blank" data-link data-social="twitter"></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" target="_blank"
-                                class="social-instagram nav-link tap"></a>
+                            <a href="https://www.instagram.com/" target="_blank" data-link data-social="instagram"></a>
                         </li>
                         <li>
-                            <a href="https://www.pinterest.com/" target="_blank"
-                                class="social-pinterest nav-link tap"></a>
+                            <a href="https://www.pinterest.com/" target="_blank" data-link data-social="pinterest"></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="social-linkedin nav-link tap"></a>
+                            <a href="https://www.linkedin.com/" target="_blank" data-link data-social="linkedin"></a>
                         </li>
                     </ul>
                 </nav>
@@ -428,7 +420,7 @@
         window.jQuery || document.write('<script src="js/lib/jquery-v3.4.1.js"><\/script>');
 
     </script>
-    <script src="js/script.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

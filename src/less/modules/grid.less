@@ -1,0 +1,44 @@
+// Grid: modify the grid to your project specifications
+// ----------------------------------------------------------------------------/
+[data-grid="main"] {
+    grid-template-columns: repeat(3, 1fr);
+
+    header,
+    footer {
+        grid-column: 1 ~"/" -1;
+    }
+
+    article,
+    section {
+        grid-column: span 2;
+    }
+}
+
+
+// Small Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.small-grid () {
+
+    [data-grid="main"] {
+        display: block;
+    }
+
+}
+
+
+// Medium Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.medium-grid () {
+
+    // Add code
+
+}
+
+
+// Large Screen Breakpoint
+// ----------------------------------------------------------------------------/
+.large-grid () {
+
+    // Add code
+
+}

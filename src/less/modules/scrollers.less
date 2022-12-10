@@ -1,0 +1,38 @@
+// Scrollers
+// ----------------------------------------------------------------------------/
+.scroll-top {
+    position: absolute;
+    top: -1.875rem;
+    left: 50%;
+    margin-left: -1.875rem;
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: #148f6a;
+    color: #fff;
+    border-radius: 100%;
+    box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+.scroll-top::before {
+    position: absolute;
+    top: 1.5625rem;
+    left: 1.3125rem;
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    content: "";
+    border-left: 0.25rem solid white;
+    border-top: 0.25rem solid white;
+    backface-visibility: hidden;
+    transform: rotate(45deg);
+}
+
+.scroll-top:hover {
+    background-color: #17a57b;
+}
+
+.scroll-top:active {
+    box-shadow: none;
+}

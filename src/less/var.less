@@ -1,0 +1,214 @@
+// Variables
+// ============================================================================/
+:root {
+    --bg-color: #fff;
+    --font-color: #333;
+    --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+    --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+    --font-size: 100%;
+    --line-height: 1.5;
+    --leading: 1.5rem;
+    --h1: clamp(2rem, 6vw, 4rem);
+    --h2: clamp(1.8rem, 5vw, 3rem);
+    --h3: clamp(1.4rem, 4vw, 2.4rem);
+    --h4: clamp(1.2rem, 3vw, 2rem);
+    --h5: clamp(1rem, 3vw, 1.8rem);
+    --h6: clamp(1rem, 3vw, 1.4rem);
+    --sm: 75%;
+    --gap: 1.25rem;
+    --space-y: .5rem;
+    --space-x: .75rem;
+    --border-width: .0625em;
+    --border-color: rgba(0, 0, 0, .3);
+    --wrapper-width: 62.5rem;
+    --dropbox-width: 10rem;
+}
+
+
+// Theme Colors
+// ----------------------------------------------------------------------------/
+@root-background-color: var(--bg-color);
+@root-font-color: var(--font-color);
+
+@primary: #148f6a;
+@primary-contrast: contrast(@primary);
+@primary-active: darken(@primary, 5%);
+
+@secondary: #22272e;
+@secondary-contrast: contrast(@secondary);
+@secondary-active: darken(@secondary, 5%);
+
+
+// Typography
+// ----------------------------------------------------------------------------/
+@root-font-size: var(--font-size);
+@root-font-family: var(--font-sans);
+@link-color: @primary;
+
+// headings
+@headings-font-family: false;
+@headings-font-color: false;
+@headings-font-weight: 400;
+@h1-font-size: var(--h1);
+@h2-font-size: var(--h2);
+@h3-font-size: var(--h3);
+@h4-font-size: var(--h4);
+@h5-font-size: var(--h5);
+@h6-font-size: var(--h6);
+
+// small
+@small-font-size: var(--sm);
+
+// mark
+@mark-background: #fc0;
+@mark-contrast: contrast(@mark-background);
+
+// hr
+@hr-border-style: solid;
+@hr-border-width: var(--border-width);
+@hr-border-color: var(--border-color);
+
+
+// Wrapper
+// ----------------------------------------------------------------------------/
+@wrapper-margin-top: calc(var(--leading) * 3);
+@wrapper-margin-bottom: calc(var(--leading) * 4);
+@wrapper-min-width: 20rem;
+@wrapper-max-width: var(--wrapper-width);
+@wrapper-gap: var(--gap);
+
+
+// Lists
+// ----------------------------------------------------------------------------/
+// order list
+@ol-list-style-type: decimal;
+@ol-list-style-type-sub: lower-alpha;
+
+// unorder list
+@ul-list-style-type: disc;
+@ul-list-style-type-sub: circle;
+
+
+// Code
+// ----------------------------------------------------------------------------/
+@code-font-family: var(--font-mono);
+
+
+// Blockquote
+// ----------------------------------------------------------------------------/
+@blockquote-font-family: var(--font-serif);
+@blockquote-font-style: italic;
+
+
+// Table
+// ----------------------------------------------------------------------------/
+@table-cell-padding-y: var(--space-y);
+@table-cell-padding-x: var(--space-x);
+
+
+// Form
+// ----------------------------------------------------------------------------/
+@form-background: transparent;
+@form-background-active: #fff9ef;
+@form-color: false;
+@form-color-active: contrast(@form-background-active);
+@form-padding-y: var(--space-y);
+@form-padding-x: var(--space-x);
+@form-border-width: var(--border-width);
+@form-border-color: var(--border-color);
+@form-border-active: rgba(0, 0, 0, 0.5);
+@form-border-radius: false;
+@text-area-min-height: 6.25rem;
+
+
+// Button
+// ----------------------------------------------------------------------------/
+@button-background: transparent;
+@button-background-active: rgba(0, 0, 0, .1);
+@button-padding-y: var(--space-y);
+@button-padding-x: var(--space-x);
+@button-border-width: var(--border-width);
+@button-border-color: transparent;
+@button-border-radius: false;
+
+
+// Navigation
+// ----------------------------------------------------------------------------/
+// navbar
+@navbar-background: @secondary;
+@navbar-sub-background: lighten(@navbar-background, 3%);
+@navbar-link-color: contrast(@navbar-background);
+@navbar-link-active: lighten(@navbar-background, 60%);
+
+// data-link
+@link-padding-y: var(--space-y);
+@link-padding-x: var(--space-x);
+@link-active: #fff;
+
+// line tabs
+@line-link-color: #777;
+@line-link-active: @root-font-color;
+@line-border-width: 0.125em;
+@line-border-color: var(--border-color);
+@line-border-active: @primary;
+
+// breadcrumb
+@breadcrumb-separator: "/";
+
+
+// Dropdown
+// ----------------------------------------------------------------------------/
+@dropbox-min-width: var(--dropbox-width);
+@dropbox-transition: opacity 0.2s ease-out;
+
+
+// Tooltip
+// ----------------------------------------------------------------------------/
+@tooltip-min-width: @dropbox-min-width;
+@tooltip-background: @navbar-sub-background;
+@tooltip-contrast: contrast(@tooltip-background);
+@tooltip-transition: opacity 0.4s ease-out;
+
+
+// Call to Action Colors
+// ----------------------------------------------------------------------------/
+@success: #198038;
+@success-contrast: contrast(@success);
+@success-active: darken(@success, 5%);
+
+@warning: #ff832b;
+@warning-contrast: contrast(@warning);
+@warning-active: darken(@warning, 5%);
+
+@danger: #da1e28;
+@danger-contrast: contrast(@danger);
+@danger-active: darken(@danger, 5%);
+
+@disabled: #e6e6e6;
+@disabled-contrast: lighten(contrast(@disabled), 60%);
+
+
+// Iconography
+// ----------------------------------------------------------------------------/
+@icon-font-name: "icons";
+@icon-font-path: "../../../fonts/icons/";
+
+
+// Selection
+// ----------------------------------------------------------------------------/
+@selection: #d8e5ff;
+@selection-contrast: contrast(@selection);
+
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
+// small screen 680px
+@screen-small-max-width: 42.5em;
+
+// medium screen 681px - 979px
+@screen-medium-min-width: 42.5625em;
+@screen-medium-max-width: 61.1875em;
+
+// large screens 980px
+@screen-large-min-width: 61.25em;
