@@ -595,6 +595,37 @@ body > [data-wrapper]:last-child {
   background-color: #0081e8;
 }
 
+[data-button~="circle"] {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100%;
+  margin-left: -1.875rem;
+  transition: background-color .3s ease-in-out;
+  display: block;
+  position: absolute;
+  top: -1.875rem;
+  left: 50%;
+  box-shadow: 0 0 .3125em #0000004d;
+}
+
+[data-button~="circle"]:before {
+  width: .875rem;
+  height: .875rem;
+  content: "";
+  backface-visibility: hidden;
+  border-top: .25rem solid #fff;
+  border-left: .25rem solid #fff;
+  display: inline-block;
+  position: absolute;
+  top: 1.5625rem;
+  left: 1.3125rem;
+  transform: rotate(45deg);
+}
+
+[data-button~="circle"]:active {
+  box-shadow: none;
+}
+
 .plan-card {
   width: 100%;
   text-align: center;
@@ -650,47 +681,16 @@ body > [data-wrapper]:last-child {
   border: 0;
 }
 
-[data-button~="scroll"] {
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 100%;
-  margin-left: -1.875rem;
-  transition: background-color .3s ease-in-out;
-  display: block;
-  position: absolute;
-  top: -1.875rem;
-  left: 50%;
-  box-shadow: 0 0 .3125em #0000004d;
-}
-
-[data-button~="scroll"]:before {
-  width: .875rem;
-  height: .875rem;
-  content: "";
-  backface-visibility: hidden;
-  border-top: .25rem solid #fff;
-  border-left: .25rem solid #fff;
-  display: inline-block;
-  position: absolute;
-  top: 1.5625rem;
-  left: 1.3125rem;
-  transform: rotate(45deg);
-}
-
-[data-button~="scroll"]:active {
-  box-shadow: none;
-}
-
-.section {
+[data-section] {
   padding-top: 5.5rem;
   padding-bottom: 4.125rem;
 }
 
-.section:nth-child(2n):not(.marketing) {
+[data-section]:nth-child(2n):not(.marketing, [data-section~="small"]) {
   background-color: #dee2e7;
 }
 
-.footer {
+[data-section~="footer"] {
   color: #edeff2;
   background-color: #404040;
   padding-top: 5.5rem;
@@ -698,13 +698,13 @@ body > [data-wrapper]:last-child {
   position: relative;
 }
 
-.small-footer {
+[data-section~="small"] {
   color: #edeff2;
   background-color: #333;
   padding-top: 1.375rem;
 }
 
-.marketing {
+[data-section~="marketing"] {
   color: #edeff2;
   text-align: center;
   background-color: #2d343d;
