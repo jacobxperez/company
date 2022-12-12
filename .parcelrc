@@ -1,6 +1,6 @@
 {
   "extends": ["@parcel/config-default"],
-  "namers": ["parcel-namer-hashless", "@mischnic/parcel-namer-preserve-structure", "..."],
+  "namers": ["@mischnic/parcel-namer-preserve-structure", "parcel-namer-hashless", "..."],
   "optimizers": {
     "*.html": ["parcel-optimizer-friendly-urls", "..."]
   }
