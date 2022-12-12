@@ -1,7 +1,7 @@
 {
-  "name": "rams",
+  "name": "company",
   "version": "1.0.0",
-  "description": "Zero-Class Framework built with less, but better.",
+  "description": "A single page website template for your business marketing",
   "source": [
     "src/index.html",
     "src/less/main.less",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobxperez/rams.git"
+    "url": "git+https://github.com/jacobxperez/company.git"
   },
   "keywords": [
     "css",
@@ -33,13 +33,14 @@
   "author": "Jacob Perez",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jacobxperez/rams/issues"
+    "url": "https://github.com/jacobxperez/company/issues"
   },
-  "homepage": "https://github.com/jacobxperez/rams/",
+  "homepage": "https://github.com/jacobxperez/company/",
   "devDependencies": {
-    "@parcel/transformer-less": "^2.8.0",
+    "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
+    "@parcel/transformer-less": "^2.8.1",
     "less": "^4.1.3",
-    "parcel": "^2.8.0",
+    "parcel": "^2.8.1",
     "parcel-namer-hashless": "^1.0.3",
     "parcel-optimizer-friendly-urls": "^0.2.0"
   }
