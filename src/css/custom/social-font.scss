@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "social";
+    src: url('../fonts/social/social.eot') format('eot'),
+    url('../fonts/social/social.woff2') format('woff2'),
+    url('../fonts/social/social.woff') format('woff'),
+    url('../fonts/social/social.ttf') format('truetype'),
+    url('../fonts/social/social.svg#social') format('svg');
+}
+
+[data-social]:before {
+    content: attr(data-social);
+    display: inline-block;
+    font-family: "social";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    vertical-align: middle;
+    text-transform: none;
+}

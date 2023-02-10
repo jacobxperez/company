@@ -1,0 +1,88 @@
+[data-button~="facebook"],
+[data-button~="twitter"],
+[data-button~="instagram"],
+[data-button~="pinterest"],
+[data-button~="linkedin"] {
+    color: #fff;
+}
+
+[data-button~="facebook"] {
+    background-color: #314EA5;
+}
+
+[data-button~="facebook"]:hover,
+[data-button~="facebook"]:focus,
+[data-button~="facebook"]:active {
+    background-color: #3757b9;
+}
+
+[data-button~="twitter"] {
+    background-color: #55ACEF;
+}
+
+[data-button~="twitter"]:hover,
+[data-button~="twitter"]:focus,
+[data-button~="twitter"]:active {
+    background-color: #6cb7f1;
+}
+
+[data-button~="instagram"] {
+    background-color: #EE4E33;
+}
+
+[data-button~="instagram"]:hover,
+[data-button~="instagram"]:focus,
+[data-button~="instagram"]:active {
+    background-color: #f0624b;
+}
+
+[data-button~="pinterest"] {
+    background-color: #D2172E;
+}
+
+[data-button~="pinterest"]:hover,
+[data-button~="pinterest"]:focus,
+[data-button~="pinterest"]:active {
+    background-color: #e9334a;
+}
+
+[data-button~="linkedin"] {
+    background-color: #0073CE;
+}
+
+[data-button~="linkedin"]:hover,
+[data-button~="linkedin"]:focus,
+[data-button~="linkedin"]:active {
+    background-color: #0081e8;
+}
+
+[data-button~="circle"] {
+    position: absolute;
+    top: -1.875rem;
+    left: 50%;
+    margin-left: -1.875rem;
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+[data-button~="circle"]::before {
+    position: absolute;
+    top: 1.5625rem;
+    left: 1.3125rem;
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    content: "";
+    border-left: 0.25rem solid white;
+    border-top: 0.25rem solid white;
+    backface-visibility: hidden;
+    transform: rotate(45deg);
+}
+
+[data-button~="circle"]:active {
+    box-shadow: none;
+}
