@@ -30,7 +30,13 @@ On your terminal run these scripts to compile build
 
 ## LICENSE
 
-Copyright (C) 2022 [Jacob Perez](https://github.com/jacobxperez)
+Copyright (C) 2023 [Jacob Perez](https://github.com/jacobxperez)
+
+### Content
+
+Licensed under the [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0)
+
+### Code
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License");
 you may not use this file except in compliance with the License.
