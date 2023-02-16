@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "postcss-custom-selectors": true,
+    "postcss-contrast": true,
+    "postcss-variable-compress": true
+  }
+}
