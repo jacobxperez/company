@@ -7,8 +7,8 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Components - RAMs</title>
-        <link rel="stylesheet" href="../../css/main.scss" />
-        <script src="../../js/main.js"></script>
+        <link rel="stylesheet" href="../../src/css/main.scss" />
+        <script src="../../src/js/main.js"></script>
     </head>
 
     <body>
@@ -17,10 +17,13 @@
 
             <p data-flex="wrap">
                 <span data-item="grow">
-                    With <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" target="_blank">data-attributes</a> components become more
-                    composable.</span
+                    With
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" target="_blank">data-attributes</a>
+                    components become more composable.</span
                 >
-                <a href="https://github.com/jacobxperez/rams/blob/master/src/docs/components/index.html" target="_blank" data-icon="&#xe08e;"> Edit Page</a>
+                <a href="https://github.com/jacobxperez/rams/blob/master/docs/components/index.html" target="_blank" data-icon="&#xe08e;">
+                    Edit Page</a
+                >
             </p>
 
             <hr />
@@ -109,9 +112,9 @@
                     <nav>
                         <ul data-nav>
                             <li><a data-anchor data-state="active">Active</a></li>
-                            <li><a data-anchor>Link</a></li>
-                            <li><a data-anchor>Link</a></li>
-                            <li><a data-anchor>Link</a></li>
+                            <li><a data-anchor>Anchor</a></li>
+                            <li><a data-anchor>Anchor</a></li>
+                            <li><a data-anchor>Anchor</a></li>
                         </ul>
                     </nav>
 
@@ -126,14 +129,21 @@
                         </ul>
                     </nav>
 
-                    <h3>Tabs</h3>
+                    <h3>Line</h3>
 
                     <nav>
-                        <ul data-nav="line">
+                        <ul data-nav="line-top">
                             <li><a data-anchor="line" data-state="active">Active</a></li>
-                            <li><a data-anchor="line">Tab</a></li>
-                            <li><a data-anchor="line">Tab</a></li>
-                            <li><a data-anchor="line">Tab</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
+                        </ul>
+
+                        <ul data-nav="line-bottom">
+                            <li><a data-anchor="line" data-state="active">Active</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
+                            <li><a data-anchor="line">Anchor</a></li>
                         </ul>
                     </nav>
 
@@ -142,9 +152,9 @@
                     <nav data-navbar>
                         <ul data-nav>
                             <li><a data-anchor="navbar" data-state="active">Active</a></li>
-                            <li><a data-anchor="navbar">Link</a></li>
-                            <li><a data-anchor="navbar">Link</a></li>
-                            <li><a data-anchor="navbar">Link</a></li>
+                            <li><a data-anchor="navbar">Anchor</a></li>
+                            <li><a data-anchor="navbar">Anchor</a></li>
+                            <li><a data-anchor="navbar">Anchor</a></li>
                         </ul>
                     </nav>
                 </section>
@@ -158,7 +168,7 @@
 
                     <p>
                         Display additional
-                        <span data-tooltip="Lorem ipsum dolor sit amet.">context</span>
+                        <span data-tooltip="Lorem ipsum dolor sit amet">context</span>
                         on hover or on click with tooltip.
                     </p>
 

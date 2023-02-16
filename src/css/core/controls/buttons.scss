@@ -3,7 +3,7 @@
 }
 
 [data-button~="tertiary"] {
-    background-color:  var(--tertiary);
+    background-color: var(--tertiary);
     color: var(--tertiary-text);
 }
 
@@ -13,12 +13,12 @@
 }
 
 [data-button="tertiary outline"] {
-    border-color:  var(--tertiary);
+    border-color: var(--tertiary);
     color: var(--tertiary);
 }
 
 [data-button~="secondary"] {
-    background-color:  var(--secondary);
+    background-color: var(--secondary);
     color: var(--secondary-text);
 }
 
@@ -48,48 +48,48 @@
 }
 
 [data-button~="success"] {
-    background-color: $success;
-    color: $success-text;
+    background-color: var(--success);
+    color: var(--success-text);
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
-    background-color: $success-active;
-    color: $success-text;
+    background-color: var(--success-active);
+    color: var(--success-text);
 }
 
 [data-button="success outline"] {
-    border-color: $success;
-    color: $success;
+    border-color: var(--success);
+    color: var(--success);
 }
 
 [data-button~="warning"] {
-    background-color: $warning;
-    color: $warning-text;
+    background-color: var(--warning);
+    color: var(--warning-text);
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
-    background-color: $warning-active;
-    color: $warning-text;
+    background-color: var(--warning-active);
+    color: var(--warning-text);
 }
 
 [data-button="warning outline"] {
-    border-color: $warning;
-    color: $warning;
+    border-color: var(--warning);
+    color: var(--warning);
 }
 
 [data-button~="danger"] {
-    background-color: $danger;
-    color: $danger-text;
+    background-color: var(--danger);
+    color: var(--danger-text);
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
-    background-color: $danger-active;
-    color: $danger-text;
+    background-color: var(--danger-active);
+    color: var(--danger-text);
 }
 
 [data-button="danger outline"] {
-    border-color: $danger;
-    color: $danger;
+    border-color: var(--danger);
+    color: var(--danger);
 }
 
 [data-button~="outline"] {

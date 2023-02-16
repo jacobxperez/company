@@ -3,30 +3,25 @@
  * Copyright (C) 2023 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
-*/
+ */
 
-// Global Imports
-// ----------------------------------------------------------------------------/
+/* Global Imports */
 @import "var.scss";
 @import "core/mixins/import.scss";
 
-
-// Reset
-// ----------------------------------------------------------------------------/
+/* Reset */
 @import "core/reset/base.scss";
 @import "core/reset/typography.scss";
+@import "core/reset/link.scss";
 @import "core/reset/blockquote.scss";
 @import "core/reset/code.scss";
 @import "core/reset/list.scss";
 @import "core/reset/tables.scss";
 @import "core/reset/forms.scss";
 @import "core/reset/button.scss";
-@import "core/reset/link.scss";
 @import "core/reset/selection.scss";
 
-
-// Components
-// ----------------------------------------------------------------------------/
+/* Components */
 @import "core/layout/wrapper.scss";
 @import "core/contextual/box.scss";
 @import "core/contextual/list.scss";
@@ -39,32 +34,22 @@
 @import "core/controls/buttons.scss";
 @import "core/controls/disabled.scss";
 
-
-// Custom Modules
-// ----------------------------------------------------------------------------/
+/* Custom Modules */
 @import "custom/grid.scss";
 @import "custom/buttons.scss";
 @import "custom/plan-card.scss";
 @import "custom/sections.scss";
 @import "custom/slider.scss";
 
-
-// Fonts
-// ----------------------------------------------------------------------------/
+/* Fonts */
 @import "core/fonts/icons.scss";
 @import "custom/social-font.scss";
 
-
-// Utilities
-// ----------------------------------------------------------------------------/
+/* Utilities */
 @import "core/utilities/import.scss";
 
-
-// Breakpoints
-// ----------------------------------------------------------------------------/
+/* Breakpoints */
 @import "core/breakpoints/import.scss";
 
-
-// Print
-// ----------------------------------------------------------------------------/
+/* Print */
 @import "custom/print.scss";
