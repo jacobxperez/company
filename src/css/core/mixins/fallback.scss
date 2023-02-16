@@ -1,46 +1,40 @@
-/* Fall-Back: prevents error when removing imports from theme stylesheets
------------------------------------------------------------------------------ */
+/* Fall-Back: prevents error when removing imports from theme stylesheets */
 
-// Custom Modules
-// ----------------------------------------------------------------------------/
-@mixin small-screen(){
-    // empty
+/* Custom Modules */
+@mixin small-screen() {
+    /* leve empty */
 }
 
-@mixin medium-screen(){
-    // empty
+@mixin medium-screen() {
+    /* leve empty */
 }
 
-@mixin large-screen(){
-    // empty
+@mixin large-screen() {
+    /* leve empty */
 }
 
-
-// Grid
-// ----------------------------------------------------------------------------/
-@mixin small-grid(){
-    // empty
+/* Grid */
+@mixin small-grid() {
+    /* leve empty */
 }
 
-@mixin medium-grid(){
-    // empty
+@mixin medium-grid() {
+    /* leve empty */
 }
 
-@mixin large-grid(){
-    // empty
+@mixin large-grid() {
+    /* leve empty */
 }
 
-
-// Display
-// ----------------------------------------------------------------------------/
-@mixin small-display(){
-    // empty
+/* Display */
+@mixin small-display() {
+    /* leve empty */
 }
 
-@mixin medium-display(){
-    // empty
+@mixin medium-display() {
+    /* leve empty */
 }
 
-@mixin large-display(){
-    // empty
+@mixin large-display() {
+    /* leve empty */
 }

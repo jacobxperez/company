@@ -1,54 +1,35 @@
-// Grid: modify the grid to your project specifications
-// ----------------------------------------------------------------------------/
+/* Modify the grid to your project specifications */
 [data-grid] {
     display: grid;
-    column-gap: var(--wrapper-gap);
+    column-gap: $grid-gap;
 }
 
 [data-grid="main"] {
     grid-template-columns: repeat(3, 1fr);
+}
 
-    header,
-    footer {
-        grid-column: 1 #{"/"} -1;
+:where([data-grid="main"]) header, footer {
+    grid-column: 1 #{"/"} -1;
+}
+
+:where([data-grid="main"]) article, section {
+    grid-column: span 2;
+}
+
+@mixin small-grid() {
+    /* Add code for small screen  */
+    [data-grid="main"] {
+        display: block;
     }
+}
 
-    article,
-    section {
+@mixin medium-grid() {
+    /* Add code for medium screen  */
+    :where([data-grid="main"]) div, li {
         grid-column: span 2;
     }
 }
 
-
-// Small Screen Breakpoint
-// ----------------------------------------------------------------------------/
-@mixin small-grid(){
-
-    [data-grid="main"] {
-        display: block;
-    }
-
-}
-
-
-// Medium Screen Breakpoint
-// ----------------------------------------------------------------------------/
-@mixin medium-grid(){
-
-    [data-grid="main"] {
-        div,
-        li {
-            grid-column: span 2;
-        }
-    }
-
-}
-
-
-// Large Screen Breakpoint
-// ----------------------------------------------------------------------------/
-@mixin large-grid(){
-
-    // Add code
-
+@mixin large-grid() {
+    /* Add code for large screen  */
 }
