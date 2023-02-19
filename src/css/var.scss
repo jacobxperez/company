@@ -1,66 +1,52 @@
 :root {
-    --background-color: #fff;
+    --background: hsl(0, 0%, 100%);
     --font-color: hsl(0, 0%, 15%);
-    --link-color: var(--primary);
-    --border-color: hsl(0, 0%, 50%);
-
-    --primary: hsl(160, 75%, 30%);
-    --primary-text: contrast(var(--primary));
-    --primary-active: hsl(160, 75%, 25%);
-
-    --secondary: hsl(215, 15%, 15%);
-    --secondary-text: contrast(var(--secondary));
-    --secondary-active: hsl(215, 15%, 20%);
-
-    --tertiary: var(--font-color);
-    --tertiary-text: contrast(var(--tertiary));
-    --tertiary-active: hsl(0, 0%, 20%);
-
-    --success: hsl(140, 70%, 30%);
-    --success-text: contrast(var(--secondary));
-    --success-active: hsl(140, 70%, 25%);
-
-    --warning: hsl(25, 100%, 60%);
-    --warning-text: contrast(var(--warning));
-    --warning-active: hsl(25, 100%, 55%);
-
-    --danger: hsl(0, 70%, 50%);
-    --danger-text: contrast(var(--danger));
-    --danger-active: hsl(0, 70%, 45%);
-
-    --navbar-background: hsl(215, 15%, 15%);
-    --navbar-child-background: hsl(215, 15%, 20%);
-    --anchor-navbar-text: hsl(215, 15%, 90%);
-    --anchor-navbar-text-active: hsl(215, 15%, 60%);
-
-    --tooltip-background: var(--navbar-child-background);
-    --tooltip-text: contrast(var(--tooltip-background));
-
-    --disabled: hsl(0, 0%, 90%);
-    --disabled-text: hsl(0, 0%, 50%);
-
-    --selection: hsl(220, 100%, 60%);
-    --selection-text: contrast(var(--secondary-text));
 }
 
 // @media (prefers-color-scheme: dark) {
 //     :root {
-//         --background-color: hsl(0, 0%, 10%);
+//         --background: hsl(0, 0%, 10%);
 //         --font-color: hsl(0, 0%, 70%);
 //     }
 // }
+
+/* Colors */
+$background: var(--background);
+$font-color: var(--font-color);
+$font-color-secondary: hsl(0, 0%, 50%);
+
+$primary: hsl(160, 75%, 30%);
+$primary-text: hsl(0, 0%, 100%);
+$primary-active: hsl(160, 75%, 25%);
+
+$secondary: hsl(215, 15%, 15%);
+$secondary-text: hsl(0, 0%, 100%);
+$secondary-active: hsl(215, 15%, 20%);
+
+$tertiary: var(--font-color);
+$tertiary-text: hsl(0, 0%, 100%);
+$tertiary-active: hsl(0, 0%, 20%);
+
+$navbar-background: hsl(0, 0%, 15%);
+$navbar-child-background: hsl(0, 0%, 20%);
+$navbar-anchor-text: hsl(0, 0%, 100%);
+$navbar-anchor-text-active: hsl(0, 0%, 70%);
 
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
+$border-color: hsl(0, 0%, 50%);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $font-size: 100%;
 $font-weight: 400;
-$nav-line-height: 1.5;
-$leading: 1.5rem; /* margin bottom */
+$line-height: 1.5;
+$leading: 1.5rem;
+
+/* link */
+$link-color: $primary;
 
 /* headings */
 $headings-font-family: false;
@@ -84,12 +70,12 @@ $small-font-size: 0.75rem;
 
 /* mark */
 $mark-background: hsl(50, 100%, 50%);
-$mark-text: contrast(#{$mark-background});
+$mark-text: hsl(0, 0%, 0%);
 
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: $border-width;
-$hr-border-color: var(--font-color);
+$hr-border-color: $font-color;
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -102,40 +88,63 @@ $table-cell-padding-y: $space-y;
 $table-cell-padding-x: $space-x;
 
 /* Form */
-$form-background: transparent;
-$form-text: hsl(0, 0%, 50%);
-$form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
-$form-border-color: var(--font-color);
-$form-border-active: var(--primary);
+$form-border-color: $font-color;
+$form-border-active: $primary;
 $form-border-radius: false;
+$form-background: transparent;
+$form-text: $font-color-secondary;
+$form-text-active: $font-color;
 $text-area-min-height: 6.25rem;
 
 /* Button */
-$button-background: hsla(0, 0%, 0%, 0.1);
-$button-background-active: hsla(0, 0%, 0%, 0.2);
-$button-text-color: var(--font-color);
 $button-padding-y: $space-y;
 $button-padding-x: $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
+$button-background: hsla(0, 0%, 50%, 0.1);
+$button-background-active: hsla(0, 0%, 50%, 0.2);
+$button-text-color: $font-color;
 
-/* Navigation Anchor */
+/* Feedback */
+$success: hsl(150, 100%, 25%);
+$success-text: hsl(0, 0%, 100%);
+$success-active: hsl(150, 100%, 20%);
+
+$warning: hsl(25, 100%, 60%);
+$warning-text: hsl(0, 0%, 100%);
+$warning-active: hsl(25, 100%, 55%);
+
+$danger: hsl(0, 70%, 50%);
+$danger-text: hsl(0, 0%, 100%);
+$danger-active: hsl(0, 70%, 45%);
+
+/* Disabled */
+$disabled: hsl(0, 0%, 90%);
+$disabled-text: hsl(0, 0%, 50%);
+
+/* Navbar */
+$navbar-background: hsl(215, 15%, 15%);
+$navbar-child-background: hsl(215, 15%, 20%);
+$navbar-anchor-text: hsl(215, 15%, 90%);
+$navbar-anchor-text-active: hsl(215, 15%, 70%);
+
+/* Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
-$anchor-text-active: var(--font-color);
+$anchor-text-active: $font-color;
 
-/* line */
+/* Nav Line */
 $nav-line-border-width: 0.125em;
-$nav-line-border-color: var(--border-color);
-$anchor-line-text: hsl(0, 0%, 50%);
-$anchor-line-text-active: var(--font-color);
-$anchor-line-border-active: var(--primary);
+$nav-line-border-color: $border-color;
+$nav-line-anchor-text: $font-color-secondary;
+$nav-line-anchor-text-active: $font-color;
+$nav-line-anchor-border-active: $primary;
 
-/* breadcrumb */
+/* Breadcrumb */
 $breadcrumb-separator: "/";
 
 /* Dropdown */
@@ -144,6 +153,8 @@ $dropbox-transition: opacity 0.2s ease-out;
 
 /* Tooltip */
 $tooltip-min-width: $dropbox-min-width;
+$tooltip-background: $navbar-child-background;
+$tooltip-text: $navbar-anchor-text;
 $tooltip-transition: opacity 0.4s ease-out;
 
 /* Iconography */
@@ -156,9 +167,9 @@ $grid-gap: 1.25rem;
 /* Wrapper */
 $wrapper-min-width: 20rem;
 $wrapper-max-width: 62.5rem;
-$wrapper-gap: $grid-gap;
 $wrapper-margin-top: calc($leading * 3);
 $wrapper-margin-bottom: calc($leading * 4);
+$wrapper-gap: $grid-gap;
 
 /* Breakpoints */
 $screen-small-max-width: 42.5em; /* small screen 680px */
@@ -168,3 +179,7 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 
 /* Print */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+
+/* Selection */
+$selection: hsl(220, 100%, 60%);
+$selection-text: hsl(0, 0%, 100%);
