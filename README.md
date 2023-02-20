@@ -1,8 +1,8 @@
 # [Company](https://jacobxperez.github.io/company/)
 
-A single page website template for your business marketing - built with [Rams](https://github.com/jacobxperez/rams)
+A single page website template for your business marketing — built with [Rams](https://github.com/jacobxperez/rams)
 
-## LICENSE
+## LICENSE— 
 
 Copyright (C) 2023 [Jacob Perez](https://github.com/jacobxperez)
 
