@@ -6,119 +6,112 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
     // Slider
-    $(function() {
+    $(function () {
+        // Slider
+        $(".slider").each(function () {
+            var slider = $(this),
+                slides = slider.find(".slide"),
+                totalSlides = slides.length,
+                currIndex = 0,
+                imgCache = [],
+                intervalTime = 5000,
+                sliderInterval
 
-    	// Slider
-    	$(".slider").each(function() {
-    		var slider = $(this),
-    			slides = slider.find(".slide"),
-    			totalSlides = slides.length,
-    			currIndex = 0,
-    			imgCache = [],
-    			intervalTime = 5000,
-    			sliderInterval;
+            // fades in and out slides
+            function cycleItems() {
+                var currSlide = slides.eq(currIndex)
 
-    		// fades in and out slides
-    		function cycleItems() {
-    			var currSlide = slides.eq(currIndex);
+                slides.fadeOut(500).css("z-index", 1)
+                currSlide.fadeIn(500).css("z-index", 5)
+            } // end cycleItem
 
-    			slides.fadeOut(500).css("z-index", 1);
-    			currSlide.fadeIn(500).css("z-index", 5);
-    		} // end cycleItem
+            // Changes slides
+            function changeSlide() {
+                currIndex += 1
 
-    		// Changes slides
-    		function changeSlide() {
-    			currIndex += 1;
+                if (currIndex > totalSlides - 1) {
+                    currIndex = 0
+                }
 
-    			if (currIndex > totalSlides - 1) {
-    				currIndex = 0;
-    			}
+                cycleItems()
+            } // end changeSlide
 
-    			cycleItems();
-    		} // end changeSlide
+            // Timer for changeSlide
+            function startSlider() {
+                clearInterval(sliderInterval)
 
-    		// Timer for changeSlide
-    		function startSlider() {
-    			clearInterval(sliderInterval);
+                sliderInterval = setInterval(function () {
+                    changeSlide()
+                }, intervalTime)
+            } // end startSlider
 
-    			sliderInterval = setInterval(function() {
-    				changeSlide();
-    			}, intervalTime);
-    		} // end startSlider
+            // preload the img before starting the Slider
+            ;(function preloader() {
+                if (currIndex < totalSlides) {
+                    // load img
+                    imgCache[currIndex] = new Image()
+                    imgCache[currIndex].src = slides.eq(currIndex).find("img").attr("src")
+                    imgCache[currIndex].onload = function () {
+                        currIndex += 1
+                        preloader()
+                    }
+                } else {
+                    currIndex = 0
+                    cycleItems()
+                    startSlider()
+                }
+            })() // end preloader
 
-    		// preload the img before starting the Slider
-    		(function preloader() {
-    			if (currIndex < totalSlides) {
-    				// load img
-    				imgCache[currIndex] = new Image();
-    				imgCache[currIndex].src = slides.eq(currIndex).find("img").attr("src");
-    				imgCache[currIndex].onload = function() {
-    					currIndex += 1;
-    					preloader();
-    				};
-    			} else {
-    				currIndex = 0;
-    				cycleItems();
-    				startSlider();
-    			}
-    		}()); // end preloader
+            // click on next
+            $(".next-slide").on("click", function () {
+                currIndex += 1
 
-    		// click on next
-    		$(".next-slide").on("click", function() {
-    			currIndex += 1;
+                if (currIndex > totalSlides - 1) {
+                    currIndex = 0
+                }
 
-    			if (currIndex > totalSlides - 1) {
-    				currIndex = 0;
-    			}
+                cycleItems()
+                startSlider((intervalTime = 10000))
+            }) // end click of next
 
-    			cycleItems();
-    			startSlider(intervalTime = 10000);
-    		}); // end click of next
+            // click on prev
+            $(".prev-slide").on("click", function () {
+                currIndex -= 1
 
-    		// click on prev
-    		$(".prev-slide").on("click", function() {
-    			currIndex -= 1;
+                if (currIndex < 0) {
+                    currIndex = totalSlides - 1
+                }
 
-    			if (currIndex < 0) {
-    				currIndex = totalSlides - 1;
-    			}
+                cycleItems()
+                startSlider((intervalTime = 10000))
+            }) // end click on prev
+        }) // end Slider
+    }) // end Slider
 
-    			cycleItems();
-    			startSlider(intervalTime = 10000);
-    		}); // end click on prev
-    	}); // end Slider
-
-    }); // end Slider
-
-    
     const toggle = () => {
-        const getToggle = document.querySelectorAll("[data-toggle]");
-        const getToolTip = document.querySelectorAll("[data-tooltip]");
+        const getToggle = document.querySelectorAll("[data-toggle]")
 
         // toggles attribute
         function toggleAttr(item) {
             item.addEventListener("click", (e) => {
-                !item.hasAttribute("data-state", "active") ?
-                    item.setAttribute("data-state", "active") :
-                    item.removeAttribute("data-state");
-                e.stopPropagation();
-            });
+                !item.hasAttribute("data-state", "active") ? item.setAttribute("data-state", "active") : item.removeAttribute("data-state")
+                e.stopPropagation()
+            })
         }
 
-        getToggle.forEach(toggleAttr);
-        getToolTip.forEach(toggleAttr);
+        getToggle.forEach(toggleAttr)
 
         function removeAtt(item, match, e) {
             if (e.target !== item && item.matches(match)) {
-                item.removeAttribute("data-state");
+                item.removeAttribute("data-state")
             }
         }
 
         document.addEventListener("click", (e) => {
-            getToggle.forEach((item) => removeAtt(item, '[data-toggle="pop"]', e));
-            getToolTip.forEach((item) => removeAtt(item, "[data-tooltip]", e));
-        });
+            getToggle.forEach((item) => removeAtt(item, '[data-toggle="tooltip"]', e))
+            getToggle.forEach((item) => removeAtt(item, '[data-toggle="pop"]', e))
+        })
     }
 
-    toggle();
-});
+    toggle()
+})

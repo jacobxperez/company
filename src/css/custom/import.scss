@@ -1,0 +1,22 @@
+/* Import custom modules here */
+@import "grid.scss";
+@import "buttons.scss";
+@import "plan-card.scss";
+@import "sections.scss";
+@import "slider.scss";
+@import "social-font.scss";
+
+@mixin _small-screen() {
+    /* Add code for small screens */
+    @include _small-grid();
+}
+
+@mixin _medium-screen() {
+    /* Add code for medium screens */
+    @include _medium-grid();
+}
+
+@mixin _large-screen() {
+    /* Add code for large screens */
+    @include _large-grid();
+}
