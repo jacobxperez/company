@@ -1,11 +1,3 @@
-/* Import custom modules here */
-@import "grid.scss";
-@import "buttons.scss";
-@import "plan-card.scss";
-@import "sections.scss";
-@import "slider.scss";
-@import "social-font.scss";
-
 @mixin _small-screen() {
     /* Add code for small screens */
     @include _small-grid();

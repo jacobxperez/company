@@ -18,10 +18,16 @@
 @import "core/components/import.scss";
 
 /* Custom Modules */
-@import "custom/import.scss";
+@import "custom/grid.scss";
+@import "custom/grid.scss";
+@import "custom/buttons.scss";
+@import "custom/plan-card.scss";
+@import "custom/sections.scss";
+@import "custom/slider.scss";
 
 /* Fonts */
 @import "core/fonts/icons.scss";
+@import "custom/social-font.scss";
 
 /* Utilities */
 @import "core/utilities/import.scss";
