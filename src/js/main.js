@@ -108,8 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         document.addEventListener("click", (e) => {
-            getToggle.forEach((item) => removeAtt(item, '[data-toggle="tooltip"]', e))
-            getToggle.forEach((item) => removeAtt(item, '[data-toggle="pop"]', e))
+            getToggle.forEach((item) => removeAtt(item, '[data-toggle~="dropdown"]', e))
         })
     }
 
