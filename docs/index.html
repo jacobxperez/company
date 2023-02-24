@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Read Me</title>
-        <link rel="stylesheet" href="../src/css/main.scss" />
+        <link rel="stylesheet" href="../src/css/main.css" />
         <script src="../src/js/main.js"></script>
     </head>
 
@@ -45,9 +45,9 @@
 
                 <!-- Dropdown Menu: show on small screens -->
                 <li data-display="small">
-                    <a data-anchor="navbar" data-icon="&#xe081;" data-toggle="pop"></a>
+                    <a data-anchor="navbar" data-toggle="dropdown" data-icon="&#xe081;"></a>
 
-                    <ul data-dropbox="navbar" data-position="absolute left right">
+                    <ul data-dropbox="navbar" data-position="left right">
                         <li><a data-anchor="navbar" href="index.html">Read Me</a></li>
                         <li><a data-anchor="navbar" href="components/index.html">Components</a></li>
                         <li><a data-anchor="navbar" href="icons/index.html">Icons</a></li>
@@ -73,7 +73,9 @@
 
                     <!-- Accordion Menu: show on small screens -->
                     <li data-display="small" data-list="border">
-                        <a data-anchor data-flex data-toggle><strong data-item="grow">Contents</strong> <span data-icon="&#xe043;"></span></a>
+                        <a data-anchor data-flex data-toggle
+                            ><strong data-item="grow">Contents</strong> <span data-icon="&#xe043;"></span
+                        ></a>
 
                         <ul data-dropbox>
                             <li><a data-anchor href="#build">Build</a></li>
@@ -98,33 +100,39 @@
                     <a href="https://github.com/jacobxperez/rams">repository</a> or by cloning the project:
                 </p>
 
-                <pre data-box="border"><code>git clone https://github.com/jacobxperez/rams.git</code></pre>
+                <pre data-box="padding border"><code>git clone https://github.com/jacobxperez/rams.git</code></pre>
 
                 <p>Install devDependencies on your machine with <a href="https://www.npmjs.com/" rel="nofollow">npm</a></p>
 
-                <pre data-box="border"><code>npm install</code></pre>
+                <pre data-box="padding border"><code>npm install</code></pre>
 
                 <h3 id="build">Build</h3>
 
                 <p>
-                    Edit the <a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.scss">variables</a>, add
+                    Edit the <a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.css">variables</a>, add
                     <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a> modules and linked them to
-                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.scss">main.scss</a> for compiling.
+                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.css">main.css</a> for compiling.
                 </p>
 
                 <ul data-list="ul">
                     <li>
                         <a href="https://github.com/jacobxperez/rams/tree/master/src/css/">/css</a>
                         <ul data-list="ul">
-                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/css/core">core</a> (important files for compiling)</li>
-                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a> (add custom modules here)</li>
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.scss">main.scss</a>
+                                <a href="https://github.com/jacobxperez/rams/tree/master/src/css/core">core</a> (important files for
+                                compiling)
+                            </li>
+                            <li>
+                                <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a> (add custom modules
+                                here)
+                            </li>
+                            <li>
+                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.css">main.css</a>
                                 (compile to produce the final CSS)
                             </li>
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.scss">var.scss</a> (variables for font, colors,
-                                and more)
+                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.css">var.css</a> (variables for font,
+                                colors, and more)
                             </li>
                         </ul>
                     </li>
@@ -162,7 +170,8 @@
                 <p>
                     Licensed under the
                     <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">Apache License, Version 2.0</a>
-                    (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+                    (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License
+                    at
                 </p>
 
                 <p>
@@ -170,9 +179,9 @@
                 </p>
 
                 <p>
-                    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS"
-                    BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language
-                    governing permissions and limitations under the License.
+                    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+                    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
+                    language governing permissions and limitations under the License.
                 </p>
             </article>
             <!-- end Content -->
