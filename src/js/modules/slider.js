@@ -1,7 +1,7 @@
 // Slider
 const slider = () => {
     $(".slider").each(function () {
-        var slider = $(this),
+        let slider = $(this),
             slides = slider.find(".slide"),
             totalSlides = slides.length,
             currIndex = 0,
@@ -11,7 +11,7 @@ const slider = () => {
 
         // fades in and out slides
         function cycleItems() {
-            var currSlide = slides.eq(currIndex)
+            let currSlide = slides.eq(currIndex)
 
             slides.fadeOut(500).css("z-index", 1)
             currSlide.fadeIn(500).css("z-index", 5)
