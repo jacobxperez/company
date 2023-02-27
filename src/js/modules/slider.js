@@ -1,5 +1,5 @@
 // Slider
-const slider = () => {
+const $slider = () => {
     $(".slider").each(function () {
         let slider = $(this),
             slides = slider.find(".slide"),
@@ -80,4 +80,4 @@ const slider = () => {
     })
 } // end Slider
 
-export {slider}
+export {$slider}
