@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "docs": "parcel docs/index.html --no-source-maps",
-    "dev": "parcel src/index.html --no-source-maps",
-    "watch": "parcel watch src/index.html --no-source-maps",
-    "build": "parcel build src/index.html --no-source-maps --public-url /company"
+    "dev": "parcel --no-source-maps",
+    "watch": "parcel watch --no-source-maps",
+    "build": "parcel build --no-source-maps --no-content-hash --public-url /company"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "front-end",
     "framework",
     "design system",
-    "class less Architecture"
+    "class less architecture"
   ],
   "author": "Jacob Perez",
   "license": "Apache-2.0",
