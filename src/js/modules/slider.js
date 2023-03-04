@@ -1,8 +1,8 @@
 // Slider
 const $slider = () => {
-    $(".slider").each(function () {
+    $('.slider').each(function () {
         let slider = $(this),
-            slides = slider.find(".slide"),
+            slides = slider.find('.slide'),
             totalSlides = slides.length,
             currIndex = 0,
             imgCache = [],
@@ -13,8 +13,8 @@ const $slider = () => {
         function cycleItems() {
             let currSlide = slides.eq(currIndex)
 
-            slides.fadeOut(500).css("z-index", 1)
-            currSlide.fadeIn(500).css("z-index", 5)
+            slides.fadeOut(500).css('z-index', 1)
+            currSlide.fadeIn(500).css('z-index', 5)
         } // end cycleItem
 
         // Changes slides
@@ -42,7 +42,10 @@ const $slider = () => {
             if (currIndex < totalSlides) {
                 // load img
                 imgCache[currIndex] = new Image()
-                imgCache[currIndex].src = slides.eq(currIndex).find("img").attr("src")
+                imgCache[currIndex].src = slides
+                    .eq(currIndex)
+                    .find('img')
+                    .attr('src')
                 imgCache[currIndex].onload = function () {
                     currIndex += 1
                     preloader()
@@ -55,7 +58,7 @@ const $slider = () => {
         })() // end preloader
 
         // click on next
-        $(".next-slide").on("click", function () {
+        $('.next-slide').on('click', function () {
             currIndex += 1
 
             if (currIndex > totalSlides - 1) {
@@ -67,7 +70,7 @@ const $slider = () => {
         }) // end click of next
 
         // click on prev
-        $(".prev-slide").on("click", function () {
+        $('.prev-slide').on('click', function () {
             currIndex -= 1
 
             if (currIndex < 0) {

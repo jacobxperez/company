@@ -1,10 +1,10 @@
 @font-face {
     font-family: "social";
-    src: url('../fonts/social/social.eot') format('eot'),
-    url('../fonts/social/social.woff2') format('woff2'),
-    url('../fonts/social/social.woff') format('woff'),
-    url('../fonts/social/social.ttf') format('truetype'),
-    url('../fonts/social/social.svg#social') format('svg');
+    src: url("/src/fonts/social/social.eot") format("eot"),
+        url("/src/fonts/social/social.woff2") format("woff2"),
+        url("/src/fonts/social/social.woff") format("woff"),
+        url("/src/fonts/social/social.ttf") format("truetype"),
+        url("/src/fonts/social/social.svg#social") format("svg");
 }
 
 [data-social]:before {

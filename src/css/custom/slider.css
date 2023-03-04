@@ -36,7 +36,8 @@ body {
     width: 100%;
     text-align: center;
     color: #fff;
-    text-shadow: 0em 0.125em 0.3125em rgba(0, 0, 0, 0.6), 0em 0em 0.3125em rgba(0, 0, 0, 0.5);
+    text-shadow: 0em 0.125em 0.3125em rgba(0, 0, 0, 0.6),
+        0em 0em 0.3125em rgba(0, 0, 0, 0.5);
 }
 
 .slide-title {
@@ -108,7 +109,6 @@ body {
 }
 
 @media screen and (max-width: 42.5em) {
-
     .prev-slide,
     .next-slide {
         display: none;

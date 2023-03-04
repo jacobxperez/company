@@ -7,7 +7,7 @@
 }
 
 [data-button~="facebook"] {
-    background-color: #314EA5;
+    background-color: #314ea5;
 }
 
 [data-button~="facebook"]:hover,
@@ -17,7 +17,7 @@
 }
 
 [data-button~="twitter"] {
-    background-color: #55ACEF;
+    background-color: #55acef;
 }
 
 [data-button~="twitter"]:hover,
@@ -27,7 +27,7 @@
 }
 
 [data-button~="instagram"] {
-    background-color: #EE4E33;
+    background-color: #ee4e33;
 }
 
 [data-button~="instagram"]:hover,
@@ -37,7 +37,7 @@
 }
 
 [data-button~="pinterest"] {
-    background-color: #D2172E;
+    background-color: #d2172e;
 }
 
 [data-button~="pinterest"]:hover,
@@ -47,7 +47,7 @@
 }
 
 [data-button~="linkedin"] {
-    background-color: #0073CE;
+    background-color: #0073ce;
 }
 
 [data-button~="linkedin"]:hover,
