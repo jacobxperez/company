@@ -1,4 +1,3 @@
-// Slider
 const $slider = () => {
     $('.slider').each(function () {
         let slider = $(this),
@@ -81,6 +80,6 @@ const $slider = () => {
             startSlider((intervalTime = 10000))
         })
     })
-} // end Slider
+}
 
 export {$slider}
