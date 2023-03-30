@@ -1,29 +1,26 @@
 const toggle = () => {
-    const getToggle = document.querySelectorAll('[data-toggle]');
-
-    // toggles attribute
-    function toggleAttr(item) {
-        item.addEventListener('click', (e) => {
-            item.hasAttribute('data-state', 'active')
-                ? item.removeAttribute('data-state')
-                : item.setAttribute('data-state', 'active');
-            e.stopPropagation();
-        });
-    }
-
-    getToggle.forEach(toggleAttr);
-
-    function removeAtt(item, e) {
-        if (
-            (e.target !== item && item.matches('[data-toggle~="pop"]')) ||
-            item.matches('[data-toggle~="tooltip"]')
-        ) {
-            item.removeAttribute('data-state');
-        }
-    }
-
     document.addEventListener('click', (e) => {
-        getToggle.forEach((item) => removeAtt(item, e));
+        const toggle = e.target.closest('[data-toggle]');
+
+        if (toggle) {
+            toggle.hasAttribute('data-state', 'active')
+                ? toggle.removeAttribute('data-state')
+                : toggle.setAttribute('data-state', 'active');
+
+            e.stopPropagation();
+        } else {
+            const getToggle = document.querySelectorAll('[data-toggle]');
+
+            getToggle.forEach((toggle) => {
+                if (
+                    (e.target !== toggle &&
+                        toggle.matches('[data-toggle~="pop"]')) ||
+                    toggle.matches('[data-toggle~="tooltip"]')
+                ) {
+                    toggle.removeAttribute('data-state');
+                }
+            });
+        }
     });
 };
 
