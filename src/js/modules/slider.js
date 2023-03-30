@@ -1,85 +1,86 @@
-const $slider = () => {
-    $('.slider').each(function () {
-        let slider = $(this),
-            slides = slider.find('.slide'),
-            totalSlides = slides.length,
-            currIndex = 0,
-            imgCache = [],
-            intervalTime = 5000,
-            sliderInterval
+const sliders = document.querySelectorAll('.slider');
 
-        // fades in and out slides
-        function cycleItems() {
-            let currSlide = slides.eq(currIndex)
+const slider = () => {
+    sliders.forEach((slider) => {
+        const slides = slider.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const imgCache = [];
+        let currIndex = 0;
+        let intervalTime = 5000;
+        let sliderInterval;
 
-            slides.fadeOut(500).css('z-index', 1)
-            currSlide.fadeIn(500).css('z-index', 5)
-        } // end cycleItem
+        const cycleItems = () => {
+            const currSlide = slides[currIndex];
 
-        // Changes slides
-        function changeSlide() {
-            currIndex += 1
+            slides.forEach((slide) => {
+                slide.style.visibility = 'hidden';
+                slide.style.zIndex = 1;
+                slide.style.opacity = 0;
+            });
 
-            if (currIndex > totalSlides - 1) {
-                currIndex = 0
-            }
+            currSlide.style.visibility = 'visible';
+            currSlide.style.zIndex = 5;
+            currSlide.style.opacity = 1;
+            currSlide.style.transition = 'all 0.5s ease-in-out 0s';
+        };
 
-            cycleItems()
-        } // end changeSlide
-
-        // Timer for changeSlide
-        function startSlider() {
-            clearInterval(sliderInterval)
-
-            sliderInterval = setInterval(function () {
-                changeSlide()
-            }, intervalTime)
-        } // end startSlider
-
-        // preload the img before starting the Slider
-        ;(function preloader() {
-            if (currIndex < totalSlides) {
-                // load img
-                imgCache[currIndex] = new Image()
-                imgCache[currIndex].src = slides
-                    .eq(currIndex)
-                    .find('img')
-                    .attr('src')
-                imgCache[currIndex].onload = function () {
-                    currIndex += 1
-                    preloader()
+        const changeSlide = (direction) => {
+            if (direction === 'next') {
+                currIndex += 1;
+                if (currIndex > totalSlides - 1) {
+                    currIndex = 0;
                 }
-            } else {
-                currIndex = 0
-                cycleItems()
-                startSlider()
-            }
-        })() // end preloader
-
-        // click on next
-        $('.next-slide').on('click', function () {
-            currIndex += 1
-
-            if (currIndex > totalSlides - 1) {
-                currIndex = 0
+            } else if (direction === 'prev') {
+                currIndex -= 1;
+                if (currIndex < 0) {
+                    currIndex = totalSlides - 1;
+                }
             }
 
-            cycleItems()
-            startSlider((intervalTime = 10000))
-        }) // end click of next
+            cycleItems();
+        };
 
-        // click on prev
-        $('.prev-slide').on('click', function () {
-            currIndex -= 1
+        const startSlider = (time) => {
+            clearInterval(sliderInterval);
 
-            if (currIndex < 0) {
-                currIndex = totalSlides - 1
+            intervalTime = time || intervalTime;
+
+            sliderInterval = setInterval(() => {
+                changeSlide('next');
+            }, intervalTime);
+        };
+
+        const preloadImages = () => {
+            for (const slide of slides) {
+                const imgSrc = slide.querySelector('img').src;
+                const imgPromise = new Promise((resolve) => {
+                    const img = new Image();
+                    img.src = imgSrc;
+                    img.onload = resolve;
+                });
+                imgCache.push(imgPromise);
             }
+            return Promise.all(imgCache);
+        };
 
-            cycleItems()
-            startSlider((intervalTime = 10000))
-        })
-    })
-}
+        preloadImages().then(() => {
+            cycleItems();
+            startSlider();
+        });
 
-export {$slider}
+        const slideBtnContainer = slider.querySelector('.slider-nav');
+
+        slideBtnContainer.addEventListener('click', (event) => {
+            const btn = event.target;
+            if (btn.classList.contains('next-slide')) {
+                changeSlide('next');
+                startSlider(8000);
+            } else if (btn.classList.contains('prev-slide')) {
+                changeSlide('prev');
+                startSlider(8000);
+            }
+        });
+    });
+};
+
+export {sliders, slider};

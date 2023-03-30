@@ -1,30 +1,30 @@
 const toggle = () => {
-    const getToggle = document.querySelectorAll('[data-toggle]')
+    const getToggle = document.querySelectorAll('[data-toggle]');
 
     // toggles attribute
     function toggleAttr(item) {
         item.addEventListener('click', (e) => {
             item.hasAttribute('data-state', 'active')
                 ? item.removeAttribute('data-state')
-                : item.setAttribute('data-state', 'active')
-            e.stopPropagation()
-        })
+                : item.setAttribute('data-state', 'active');
+            e.stopPropagation();
+        });
     }
 
-    getToggle.forEach(toggleAttr)
+    getToggle.forEach(toggleAttr);
 
     function removeAtt(item, e) {
         if (
             (e.target !== item && item.matches('[data-toggle~="pop"]')) ||
             item.matches('[data-toggle~="tooltip"]')
         ) {
-            item.removeAttribute('data-state')
+            item.removeAttribute('data-state');
         }
     }
 
     document.addEventListener('click', (e) => {
-        getToggle.forEach((item) => removeAtt(item, e))
-    })
-}
+        getToggle.forEach((item) => removeAtt(item, e));
+    });
+};
 
-export {toggle}
+export {toggle};

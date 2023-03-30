@@ -8,31 +8,33 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: #333;
 }
 
 .slide {
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    visibility: hidden;
 }
 
 .slide img {
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 100%;
     cursor: default;
+    object-fit: cover;
+    object-position: center;
 }
 
 .slide-content {
     position: absolute;
-    bottom: 20%;
+    top: 30%;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -45,16 +47,16 @@ body {
 }
 
 .slider-nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    position: relative;
     width: 100%;
+    height: 100%;
     z-index: 10;
 }
 
 .prev-slide,
 .next-slide {
     position: absolute;
+    top: 50%;
     display: inline-block;
     width: 3.125rem;
     height: 3.125rem;
@@ -68,7 +70,6 @@ body {
     cursor: pointer;
     z-index: 20;
     transition: all 0.3s ease-in-out 0s;
-    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -82,13 +83,13 @@ body {
 
 .prev-slide:hover,
 .next-slide:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .prev-slide::before,
 .next-slide::before {
     position: absolute;
-    top: 33%;
+    top: 40%;
     display: inline-block;
     width: 0.8125rem;
     height: 0.8125rem;
@@ -100,29 +101,26 @@ body {
 
 .prev-slide::before {
     transform: rotate(-45deg);
-    right: 25%;
+    right: 30%;
 }
 
 .next-slide::before {
     transform: rotate(135deg);
-    left: 25%;
+    left: 30%;
 }
 
-@media screen and (max-width: 42.5em) {
+@media screen and (max-width: 680px) {
     .prev-slide,
     .next-slide {
-        display: none;
+        top: 0;
+        height: 100%;
+        opacity: 0;
     }
-}
-
-@media screen and (max-width: 61.25em) {
-    .slider {
-        max-height: 57.95918367vw;
+    .prev-slide {
+        left: 0;
     }
-}
 
-@media screen and (min-height: 61.25em) {
-    .slider {
-        max-height: 57.95918367vw;
+    .next-slide {
+        right: 0;
     }
 }
