@@ -108,7 +108,8 @@ $form-border-radius: false;
 $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
-$text-area-min-height: 6.25rem;
+$form-text-area-min-height: 6.25rem;
+$form-transition: all 0.2s ease-in-out 0s;
 
 /* Button */
 $button-padding-y: $space-y;
@@ -119,6 +120,7 @@ $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: $font-color;
+$button-transition: all 0.2s ease-in-out 0s;
 
 /* Feedback */
 $success: hsl(150, 100%, 25%);
@@ -147,6 +149,7 @@ $navbar-anchor-text-active: hsl(215, 15%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
+$anchor-transition: all 0.2s ease-in-out 0s;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;
