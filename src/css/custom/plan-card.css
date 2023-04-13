@@ -1,4 +1,4 @@
-.plan-card {
+[data-plan="container"] {
     margin-bottom: 1.375rem;
     margin-left: auto;
     margin-right: auto;
@@ -9,46 +9,41 @@
     box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.3);
 }
 
-.plan-header {
+[data-plan="header"] {
     padding: 2.5rem 1.25rem 2.5rem 1.25rem;
     background-color: #148f6a;
     color: #fff;
     border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
 
-.plan-header p {
+[data-plan="header"] p {
     margin: 0;
 }
 
-.plan-title {
+[data-plan="title"] {
     font-size: 1.125rem;
 }
 
-.plan-price {
+[data-plan="price"] {
     font-size: 2.75rem;
 }
 
-.plan-body {
+[data-plan="body"] {
     list-style-type: none;
     margin: 0;
     padding: 2.5rem 1.25rem 1.25rem 1.25rem;
 }
 
-.plan-body li {
+[data-plan="body"] li {
     padding: 0.625rem 0rem 0.625rem 0rem;
     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.2);
 }
 
-.plan-body li:last-child {
+[data-plan="body"] li:last-child {
     padding-bottom: 0;
     border: 0;
 }
 
-.plan-footer {
+[data-plan="footer"] {
     padding: 1.25rem 1.25rem 2.5rem 1.25rem;
-}
-
-.plan-footer .button {
-    width: 100%;
-    border: 0;
 }

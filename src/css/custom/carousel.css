@@ -1,6 +1,6 @@
 [data-carousel] {
     position: relative;
-    background-color: #333;
+    /* background-color: #333; */
 }
 
 [data-carousel="fullscreen"] {
@@ -31,7 +31,8 @@
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease-in-out 0s;
+    transition: opacity 0.5s cubic-bezier(.6,.04,.98,.34),
+        visibility 0.5s linear;
 }
 
 [data-carousel] [data-state="current"] {
@@ -126,22 +127,23 @@
     top: 90%;
     display: flex;
     justify-content: center;
-    gap: .75rem;
+    gap: 0.75rem;
 }
 
 [data-tab="indicator"] {
-    width: .875rem;
-    height: .875rem;
-    background-color: hsla(0, 0%, 100%, 0.2);
-    border: .125rem solid hsla(0, 0%, 100%, 0.8);
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: transparent;
+    border: 0.125rem solid hsla(0, 0%, 100%, 0.8);
     border-radius: 100%;
-    box-shadow: 0 0 .125rem #000;
-    transition: background-color .5s linear, border-color .5s linear, box-shadow .5s linear;
+    box-shadow: 0 0 0.125rem #000;
+    transition: background-color 0.5s cubic-bezier(.6,.04,.98,.34), border-color 0.5s cubic-bezier(.6,.04,.98,.34),
+        box-shadow 0.5s cubic-bezier(.6,.04,.98,.34);
     cursor: pointer;
 }
 
 [data-tab="indicator"][data-state="active"] {
     background-color: #fff;
-    border-color: #fff;
-    box-shadow: none;
+    border-color: hsla(0, 0%, 100%, 0.5);
+    box-shadow: 0 0 0.125rem #fff;
 }
