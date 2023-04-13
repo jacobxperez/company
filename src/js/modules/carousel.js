@@ -220,7 +220,7 @@ class Carousel {
         }
     }
 
-    // Play/pause/stop methods
+    // Start/pause/stop methods
     start(intervalTime = this.intervalTime) {
         this.paused = false;
         this.interval = setInterval(() => {
@@ -243,13 +243,13 @@ class Carousel {
         return this;
     }
 
-    #stop() {
-        this.#pause();
-        this.currentIndex = 0;
-        this.#cycleSlides();
+    // #stop() {
+    //     this.#pause();
+    //     this.currentIndex = 0;
+    //     this.#cycleSlides();
 
-        return this;
-    }
+    //     return this;
+    // }
 }
 
 export {Carousel};
