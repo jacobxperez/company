@@ -48,24 +48,13 @@ $link-color: $primary;
 /* headings */
 $headings-font-family: false;
 $headings-font-weight: 400;
-
-$h1-font-size: clamp(2.5rem, 3vw, 4rem);
-$h1-line-height: 1.2;
-
-$h2-font-size: clamp(2rem, 3vw, 3rem);
-$h2-line-height: 1.2;
-
-$h3-font-size: clamp(1.5rem, 3vw, 2rem);
-$h3-line-height: 1.2;
-
-$h4-font-size: clamp(1.3rem, 3vw, 1.5rem);
-$h4-line-height: 1.4;
-
-$h5-font-size: clamp(1.2rem, 3vw, 1.4rem);
-$h5-line-height: 1.4;
-
+$headings-line-height: 1.2;
+$h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
+$h2-font-size: clamp(2.074rem, 3vw, 3.157rem);
+$h3-font-size: clamp(1.728rem, 3vw, 2.369rem);
+$h4-font-size: clamp(1.44rem, 3vw, 1.777rem);
+$h5-font-size: clamp(1.2rem, 3vw, 1.333rem);
 $h6-font-size: $font-size;
-$h6-line-height: $line-height;
 
 /* blockquote */
 $blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
@@ -109,7 +98,7 @@ $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
 $form-text-area-min-height: 6.25rem;
-$form-transition: all 0.2s ease-in-out 0s;
+$form-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 
 /* Button */
 $button-padding-y: $space-y;
@@ -120,7 +109,7 @@ $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: $font-color;
-$button-transition: all 0.2s ease-in-out 0s;
+$button-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 
 /* Feedback */
 $success: hsl(150, 100%, 25%);
@@ -149,7 +138,7 @@ $navbar-anchor-text-active: hsl(215, 15%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
-$anchor-transition: all 0.2s ease-in-out 0s;
+$anchor-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;
@@ -163,7 +152,7 @@ $breadcrumb-separator: "/";
 
 /* Dropbox */
 $dropbox-min-width: 10rem;
-$dropbox-transition: opacity 0.2s ease-out;
+$dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
 
 /* Tooltip */
 $tooltip-min-width: 26ch;
@@ -174,11 +163,11 @@ $tooltip-text: hsl(0, 0%, 100%);
 $grid-gap: 1.5625rem;
 
 /* Wrapper */
-$wrapper-min-width: 20rem;
-$wrapper-max-width: 62.5rem;
-$wrapper-margin-top: calc($leading * 3);
-$wrapper-margin-bottom: calc($leading * 4);
-$wrapper-gap: 1.25rem;
+$container-min-width: 20rem;
+$container-max-width: 62.5rem;
+$container-margin-top: calc($leading * 3);
+$container-margin-bottom: calc($leading * 4);
+$container-gap: 1.25rem;
 
 /* Breakpoints */
 $screen-small-max-width: 42.5em; /* small screen 680px */
