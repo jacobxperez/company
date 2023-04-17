@@ -4,6 +4,7 @@
     }
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
+    color: $headings-color;
 }
 
 h1,
@@ -48,7 +49,7 @@ dfn {
 }
 
 [title]:where(abbr, dfn) {
-    text-decoration: underline dotted;
+    text-decoration: $tooltip-text-decoration;
     cursor: help;
 }
 
