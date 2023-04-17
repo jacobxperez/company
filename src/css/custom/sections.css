@@ -3,33 +3,30 @@
     padding-bottom: calc($leading * 4);
 }
 
-[data-section]:nth-child(even):not(
-        [data-section="special"],
-        [data-section="small"]
-    ) {
+[data-section]:nth-child(even):not([data-section="special"]) {
     background-color: hsl(215, 15%, 90%);
 }
 
 [data-section="footer"] {
     position: relative;
-    padding: calc($leading * 2) 0;
+    padding: calc($leading * 2) 0 $leading;
     background-color: hsl(0, 0%, 25%);
     color: hsl(215, 15%, 90%);
-}
 
-[data-section="small"] {
-    padding: $leading 0;
-    background-color: hsl(0, 0%, 20%);
-    color: hsl(215, 15%, 90%);
-}
-
-:where([data-section="small"]) [data-anchor]:hover,
-:where([data-section="small"]) [data-anchor]:active {
-    color: #fff;
+    :where(&) [data-anchor]:hover,
+    [data-anchor]:active {
+        color: #fff;
+    }
 }
 
 [data-section="special"] {
     background-color: hsl(215, 15%, 20%);
     color: hsl(215, 15%, 90%);
     text-align: center;
+
+    & h1,
+    h2,
+    h3 {
+        color: hsl(215, 15%, 90%);
+    }
 }

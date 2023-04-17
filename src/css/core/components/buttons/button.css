@@ -7,10 +7,11 @@
     @if $button-border-radius != false {
         border-radius: $button-border-radius;
     }
-    cursor: pointer;
+    text-decoration: none;
     transition: $button-transition;
+    cursor: pointer;
 
-    &:is([data-state="active"], :hover, :active, :focus) {
+    &:is([data-state="active"], :hover, :active) {
         background-color: $button-background-active;
         text-decoration: none;
     }
