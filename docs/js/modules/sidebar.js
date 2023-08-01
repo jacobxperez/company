@@ -1,8 +1,8 @@
-const sidebar = () => {
+export const sidebar = () => {
     const getAside = document.getElementById('aside');
     const getContent = document.getElementById('content');
 
-    if (template.type === 'post') {
+    if (meta.type === 'post') {
         // gets all the headings of the post
         const getHeadings = getContent.querySelectorAll(
             'h1, h2, h3, h4, h5, h6'
@@ -41,12 +41,10 @@ const sidebar = () => {
             getContents.insertAdjacentHTML('beforeend', links);
 
             // generates navigation for small screens
-            const dropdownLinks = `<li><a href="#${i}" data-anchor>${headingInnerText}</a></li>`;
+            const dropdownLinks = `<li><a href="#${i}" data-anchor="menu">${headingInnerText}</a></li>`;
             const getContentsDropdown =
                 document.getElementById('contentsDropdown');
             getContentsDropdown.insertAdjacentHTML('beforeend', dropdownLinks);
         });
     }
 };
-
-export {sidebar};
