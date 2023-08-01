@@ -4,10 +4,12 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+import {rams} from './rams/rams.js';
 import {Carousel} from './modules/carousel.js';
-import {toggle} from './modules/toggle';
 
-toggle();
+
+rams.toggle();
+
 // Example usage
 const carousel = new Carousel({
     // all options for the carousel

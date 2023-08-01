@@ -1,16 +1,20 @@
-[data-section="header"] {
+[data-section~="header"] {
     margin-bottom: $leading;
     padding-top: calc($leading * 4);
     padding-bottom: calc($leading * 2);
-    border-bottom: $border-width solid $border-color;
-    background-color: $navbar-dropbox-background;
-    color: var(--background);
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
+
+    & :--headings {
+        color: hsl(0, 0%, 100%);
+    }
 }
 
-:where([data-section="header"]) a {
-    color: $navbar-anchor-text-active;
+:where([data-section~="header"]) a {
+    color: hsl(0, 0%, 60%);
+    text-decoration: underline solid 0.125rem hsl(0, 0%, 25%);
 }
 
-[data-section="footer"] {
-    padding-bottom: calc($leading * 2);
+:where([data-section~="header"]) a:hover {
+    text-decoration: underline solid 0.125rem hsl(0, 0%, 50%);
 }

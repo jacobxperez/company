@@ -46,6 +46,7 @@ $leading: 1.5rem;
 $link-color: $primary;
 $link-text-decoration: none;
 $link-text-decoration-hover: underline solid 0.125rem;
+$link-underline-offset: .25rem;
 
 /* headings */
 $headings-color: hsl(0, 0%, 0%);
@@ -146,25 +147,33 @@ $anchor-text-active: $font-color;
 $anchor-transition: color 0.2s ease, border-color 0.2s ease,
     background-color 0.2s ease;
 
-/* Nav Line */
-$nav-line-border-width: 0.125em;
-$nav-line-border-color: $border-color;
-$nav-line-anchor-text: $font-color-secondary;
-$nav-line-anchor-text-active: $font-color;
-$nav-line-anchor-border-active: $primary;
+/* Line Tab */
+$anchor-line-border-width: 0.125em;
+$anchor-line-border-color: $border-color;
+$anchor-line-text: $font-color-secondary;
+$anchor-line-text-active: $font-color;
+$anchor-line-border-active: $primary;
 
 /* Breadcrumb */
 $breadcrumb-separator: "/";
+$breadcrumb-gap: 0.375em;
 
 /* Dropbox */
 $dropbox-min-width: 10rem;
 $dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
+
+/* Dropbox Menu */
+$dropbox-menu-background-color: #fff;
+$dropbox-menu-border: $border-width solid #333;
+$anchor-menu-background-color: #333;
+$anchor-menu-color: #fff;
 
 /* Tooltip */
 $tooltip-min-width: 26ch;
 $tooltip-background: hsl(0, 0%, 0%);
 $tooltip-text: hsl(0, 0%, 100%);
 $tooltip-text-decoration: underline dotted 0.125rem;
+$tooltip-underline-offset: .25rem;
 
 /* Grid */
 $grid-gap: 1.5625rem;

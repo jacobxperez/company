@@ -6,11 +6,11 @@
     flex-direction: row-reverse;
 }
 
-[data-flex~="list"] {
+[data-flex~="column"] {
     flex-direction: column;
 }
 
-[data-flex*="list reverse"] {
+[data-flex*="column reverse"] {
     flex-direction: column-reverse;
 }
 
@@ -18,7 +18,7 @@
     flex-wrap: wrap;
 }
 
-[data-flex~="grow-children"] > *,
+[data-flex~="grow"] > *,
 [data-item~="grow"] {
     flex-grow: 1;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" id="top">
     <head>
         <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
         <script type="module" src="../js/defer.js"></script>
         <script>
             meta.title = "Components";
-            template.type = "post";
+            meta.type = "post";
         </script>
     </head>
 
@@ -73,71 +73,42 @@
             </section>
 
             <section>
-                <h2>Navigation</h2>
-
-                <nav>
-                    <ul data-flex>
-                        <li><a data-anchor data-state="active">Active</a></li>
-                        <li><a data-anchor>Anchor</a></li>
-                        <li><a data-anchor>Anchor</a></li>
-                        <li><a data-anchor>Anchor</a></li>
-                    </ul>
-                </nav>
-
-                <h3>Breadcrumb</h3>
-
-                <nav>
-                    <ul data-flex="breadcrumb">
-                        <li>Active</li>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
-                    </ul>
-                </nav>
-
-                <h3>Line</h3>
-
-                <nav>
-                    <ul data-flex="line-top">
-                        <li><a data-anchor="line" data-state="active">Active</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                    </ul>
-
-                    <ul data-flex="line-bottom">
-                        <li><a data-anchor="line" data-state="active">Active</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                        <li><a data-anchor="line">Anchor</a></li>
-                    </ul>
-                </nav>
-
-                <h3>Navbar</h3>
-
-                <nav data-navbar>
-                    <ul data-flex>
-                        <li><a data-anchor="navbar" data-state="active">Active</a></li>
-                        <li><a data-anchor="navbar">Anchor</a></li>
-                        <li><a data-anchor="navbar">Anchor</a></li>
-                        <li><a data-anchor="navbar">Anchor</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-            <section>
                 <h2>Dropdowns</h2>
 
                 <p>Dropdowns are multifunctional they can create simple tooltips or complex dropdown content.</p>
 
+                <ul data-flex="group">
+                    <li>
+                        <button data-button="primary outline">button</button>
+                    </li>
+                    <li data-position="relative">
+                        <button data-toggle="pop" data-button="primary outline" data-icon="&#xe043;"></button>
+
+                        <ul data-dropbox="menu" data-position="right">
+                            <li><a data-anchor="menu">Anchor</a></li>
+                            <li><a data-anchor="menu">Anchor</a></li>
+                            <li><a data-anchor="menu">Anchor</a></li>
+                            <li data-position="relative">
+                                <a data-anchor="menu" data-toggle>Anchor <span data-icon="&#xe043;"></span></a>
+
+                                <ul data-dropbox data-position="right">
+                                    <li><a data-anchor="menu">Anchor</a></li>
+                                    <li><a data-anchor="menu">Anchor</a></li>
+                                    <li><a data-anchor="menu">Anchor</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
                 <h3>Tooltip</h3>
 
-                <p>Display additional context on hover or on click with tooltip.</p>
+                <p>Display additional context on hover or on click.</p>
 
                 <p>
                     <span data-toggle="tooltip"
                         >Tooltip!
-                        <span data-dropbox>Lorem ipsum dolor sit amet</span>
+                        <span data-dropbox="tooltip">Lorem ipsum dolor sit amet</span>
                     </span>
                 </p>
 
@@ -182,17 +153,165 @@
             </section>
 
             <section>
+                <h2>Navigation</h2>
+
+                <nav>
+                    <ul data-flex>
+                        <li><a data-anchor data-state="active">Active</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="center">
+                        <li><a data-anchor data-state="active">Active</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="end">
+                        <li><a data-anchor data-state="active">Active</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                        <li><a data-anchor>Anchor</a></li>
+                    </ul>
+                </nav>
+
+                <h3>Breadcrumb</h3>
+
+                <nav>
+                    <ul data-flex="breadcrumb">
+                        <li>Active</li>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                    </ul>
+                </nav>
+
+                <h3>Tabs</h3>
+
+                <nav>
+                    <ul data-flex="line-bottom">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="line-bottom center">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="line-bottom end">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="line-bottom between grow">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+
+                    <ul data-flex="line-bottom between grow" data-text="center">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+
+                    <br />
+
+                    <ul data-flex="line-top">
+                        <li><a data-anchor="line" data-state="active">Active</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                        <li><a data-anchor="line">Anchor</a></li>
+                    </ul>
+                </nav>
+
+                <h3>Navbar</h3>
+
+                <nav data-navbar>
+                    <ul data-flex>
+                        <li><a data-anchor="navbar" data-state="active">Active</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                    </ul>
+                </nav>
+
+                <br />
+
+                <nav data-navbar>
+                    <ul data-flex="between grow" data-text="center">
+                        <li><a data-anchor="navbar" data-state="active">Active</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                    </ul>
+                </nav>
+
+                <br />
+
+                <nav data-navbar>
+                    <ul data-flex>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li data-item="grow"></li>
+                        <li><a data-anchor="navbar" data-state="active">Active</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                    </ul>
+                </nav>
+
+                <br />
+
+                <nav data-navbar>
+                    <ul data-flex>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li data-item="grow"></li>
+                        <li><a data-anchor="navbar">Anchor</a></li>
+                        <li data-position="relative">
+                            <a data-anchor="navbar" data-toggle="pop">Anchor <span data-icon="&#xe043;"></span></a>
+
+                            <ul data-dropbox="navbar" data-position="left">
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                            </ul>
+                        </li>
+                        <li data-position="relative">
+                            <a data-anchor="navbar" data-toggle="pop">Anchor <span data-icon="&#xe043;"></span></a>
+
+                            <ul data-dropbox="navbar" data-position="right">
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                                <li><a data-anchor="navbar">Anchor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
                 <h2>Forms</h2>
 
                 <form>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" />
+                    <input type="text" id="name" name="name" placeholder="Your Name" />
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" />
+                    <input type="email" id="email" name="email" placeholder="Your email" />
 
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" />
+                    <input type="password" id="password" name="password" placeholder="Your Password" />
 
                     <label for="gender">Gender:</label>
                     <select id="gender" name="gender">
@@ -203,13 +322,12 @@
                     </select>
 
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter your message"></textarea>
+                    <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter Message"></textarea>
 
                     <div data-flex="gap">
                         <label for="checkbox">Checkbox:</label>
                         <input type="checkbox" id="checkbox" name="checkbox" />
                     </div>
-                    <label for="radio">Radio:</label>
                     <div data-flex="gap">
                         <label for="radio1">Option 1</label>
                         <input type="radio" id="radio1" name="radio" value="option1" />
@@ -219,10 +337,12 @@
                         <input type="radio" id="radio2" name="radio" value="option2" />
                     </div>
 
-                    <label for="file">File:</label>
+                    <label for="file" data-button="outline">File <span data-icon="&#xe006;"></span></label>
                     <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" data-button="" />
 
-                    <input type="submit" value="Submit" data-button />
+                    <div>
+                        <input type="submit" value="Submit" data-button />
+                    </div>
                 </form>
             </section>
         </template>

@@ -5,6 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 const meta = {
+    type: '',
     title: document.title,
     subtitle: '',
     author: {
@@ -42,7 +43,6 @@ const meta = {
 };
 
 const template = {
-    type: '',
     appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);
@@ -59,7 +59,7 @@ const template = {
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    getAndSetTemplate(templateSelector, targetSelector, callback = null) {
+    setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             templateSelector ? resolve() : reject();
         })
