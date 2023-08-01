@@ -3,6 +3,7 @@
     padding: $space-y $space-x;
     transition: $anchor-transition;
     text-decoration: none;
+    cursor: pointer;
 
     &:where([data-state="active"], :hover, :active) {
         color: $anchor-text-active;
@@ -13,4 +14,8 @@
         outline: thin dotted;
         outline-offset: -0.125rem;
     }
+}
+
+@if $rams-menu == true {
+    @include _anchor-menu();
 }
